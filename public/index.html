@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BricoleTout - Artisan expert pour tous vos travaux de montage, réparation et rénovation">
+  <title>BricoleTout | Artisan Professionnel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-montserrat bg-bois-clair/30 text-bois-fonce">
+
+  <!-- Header Minimaliste Boisé -->
+  <header class="w-full bg-gradient-to-b from-[#f5ede6] via-white to-[#e8ded2] py-8 border-b border-[#efe9e2]">
+    <div class="flex flex-col items-center">
+      <div class="relative flex items-center justify-center w-48 h-48 mb-4 rounded-full bg-black border-8 border-white shadow-2xl overflow-hidden">
+        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-48 w-48 object-contain drop-shadow-xl" />
+        <div class="absolute inset-0 bg-wood-pattern opacity-10"></div>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-playfair font-bold text-[#6d4325] mb-1 text-center">BricolTout</h1>
+      <div class="text-lg md:text-xl text-[#a3783c] font-semibold mb-6 text-center">L'artisan du quotidien</div>
+      <nav class="flex flex-row gap-10 mt-2 mb-2">
+        <a href="index.html" class="text-[#6d4325] font-semibold font-playfair text-base md:text-lg hover:underline">Accueil</a>
+        <a href="#services" class="text-[#6d4325] font-semibold font-playfair text-base md:text-lg hover:underline">Services</a>
+        <a href="galerie.html" class="text-[#6d4325] font-semibold font-playfair text-base md:text-lg hover:underline">Galerie</a>
+        <a href="contact.html" class="text-[#6d4325] font-semibold font-playfair text-base md:text-lg hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Hero Simple -->
+  <section class="relative py-20 md:py-32 bg-gradient-to-b from-white to-bois-clair/50 overflow-hidden">
+    <!-- Fond décoratif -->
+    <svg class="absolute top-0 left-0 w-full h-full opacity-10 z-0" viewBox="0 0 1440 500" fill="none" preserveAspectRatio="none"><path d="M0 100 Q 360 250 720 150 T 1440 200 V 500 H 0 Z" fill="#D4B89A"/></svg>
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold font-playfair text-bois-fonce mb-6 leading-tight">
+        <h1 class="font-playfair text-4xl md:text-6xl font-bold text-bois-fonce mb-6 leading-tight">BricoleTout&nbsp;: L'artisan du quotidien</h1> Pour vos petits travaux
+      </h1>
+      <p class="text-lg md:text-xl text-bois-fonce/80 max-w-2xl mx-auto mb-10">
+        Montage de meubles, peinture, petites réparations... Simplifiez votre quotidien avec un service professionnel, rapide et soigné.
+      </p>
+      <a href="contact.html" class="inline-block px-7 py-3 mt-8 rounded-full bg-gradient-to-r from-bois-accent via-orange-500 to-bois-fonce text-white hover:from-bois-fonce hover:to-orange-500 font-bold shadow-lg transition-all duration-300 border-2 border-white/80 text-lg md:text-xl">
+        Demander un devis <i class="fas fa-wrench ml-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section Présentation du service -->
+  <section id="presentation" class="py-20 md:py-28 bg-white">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+    <!-- Image à gauche -->
+    <div class="relative w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+      <img src="assets/images/illustrations/atelier.png" alt="Portrait de l'artisan BricoleTout, concentré sur un montage de meuble, outils à la main, dans une ambiance chaleureuse." class="rounded-3xl w-72 h-auto md:w-96 md:h-auto drop-shadow-2xl border-4 border-bois-accent hover:border-orange-400 transition-all duration-300" loading="lazy" />
+      <span class="absolute top-4 left-4 bg-bois-accent text-white text-xs md:text-base font-bold px-4 py-1 rounded-full shadow-lg border-2 border-white/80">Ouvrier d’expérience</span>
+      <figcaption class="mt-3 text-bois-fonce italic font-semibold text-xs md:text-sm md:absolute md:bottom-3 md:left-7 md:mt-0 bg-white border border-bois-accent px-4 py-2 rounded-xl shadow-lg">"La passion du travail bien fait, chaque jour."</figcaption>
+    </div>
+    <!-- Texte à droite -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-start text-left">
+      <h2 class="text-3xl md:text-4xl font-bold font-playfair text-bois-fonce mb-3" aria-level="2">
+        Un artisan passionné à votre service
+      </h2><br>
+      <h3 class="text-lg md:text-2xl font-semibold font-montserrat text-bois-accent mb-3 relative">
+        Expertise, confiance & réactivité
+        <span class="block w-12 h-1 bg-bois-accent rounded-full mt-2"></span>
+      </h3>
+      <h4>🔨 Oups… encore un coup de marteau mal placé ? Appelez BricolTout, les pros du bricolage sans bobos !</h4><br>
+      <p class="text-lg md:text-xl font-montserrat text-bois-fonce mb-6 leading-relaxed">
+        <span class="font-bold text-bois-accent">Chez BricolTout, on sait que le bricolage, ça peut vite devenir... brico-cata ! Que vous soyez un particulier ou un professionnel, ne prenez plus le risque de finir avec un pansement au bout des doigts.<br>
+        Montage de meubles, pose de tringles, petites réparations, entretien courant : nos artisans passionnés interviennent rapidement et avec le sourire.
+      </p>
+      <p class="text-lg md:text-xl font-montserrat text-bois-fonce mb-6 leading-relaxed">
+        Évitez les galères et les outils volants, faites appel à des mains expertes !
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- Section Avantages / Valeurs -->
+  <section id="valeurs" class="animate-fade-in-up delay-100 py-20 md:py-28 bg-bois-clair/60" aria-labelledby="valeurs-title">
+    <div class="container mx-auto px-6">
+      <h2 id="valeurs-title" class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12">Nos valeurs ajoutées</h2>
+      <div class="grid md:grid-cols-3 gap-8 mt-8" role="list">
+        <!-- Bloc 1 -->
+        <div class="bg-white/95 border border-bois-accent rounded-xl shadow-sm p-7 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-md" role="listitem">
+          <span class="text-accent-orange text-2xl mb-3" aria-hidden="true"><i class="fas fa-handshake"></i></span>
+          <h3 class="font-bold text-xl md:text-2xl mb-3 font-playfair text-bois-fonce drop-shadow-sm tracking-tight">Confiance</h3>
+          <p class="text-base md:text-lg text-bois-fonce font-montserrat leading-relaxed">Relation de confiance, artisan local à l’écoute, avis authentiques et transparence à chaque étape.</p>
+        </div>
+        <!-- Bloc 2 -->
+        <div class="bg-white/95 border border-bois-accent rounded-xl shadow-sm p-7 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-md" role="listitem">
+          <span class="text-accent-orange text-2xl mb-3" aria-hidden="true"><i class="fas fa-bolt"></i></span>
+          <h3 class="font-bold text-xl md:text-2xl mb-3 font-playfair text-bois-fonce drop-shadow-sm tracking-tight">Réactivité</h3>
+          <p class="text-base md:text-lg text-bois-fonce font-montserrat leading-relaxed">Réponse et devis sous 24h, interventions rapides et flexibles selon vos contraintes.</p>
+        </div>
+        <!-- Bloc 3 -->
+        <div class="bg-white/95 border border-bois-accent rounded-xl shadow-sm p-7 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-md" role="listitem">
+          <span class="text-accent-orange text-2xl mb-3" aria-hidden="true"><i class="fas fa-certificate"></i></span>
+          <h3 class="font-bold text-xl md:text-2xl mb-3 font-playfair text-bois-fonce drop-shadow-sm tracking-tight">Qualité</h3>
+          <p class="text-base md:text-lg text-bois-fonce font-montserrat leading-relaxed">Finitions soignées, respect des délais, matériaux adaptés et suivi personnalisé après intervention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Témoignages / Preuve sociale -->
+  <section id="temoignages" class="relative animate-fade-in-up delay-200 py-20 md:py-28 bg-gradient-to-br from-white via-bois-clair/60 to-orange-50 overflow-hidden">
+  <div class="container mx-auto px-6 flex flex-col items-center">
+    <div class="bg-white/95 border-2 border-bois-accent rounded-3xl shadow-2xl px-4 md:px-12 py-12 w-full max-w-6xl">
+      <h2 id="temoignages-title" class="flex items-center justify-center gap-3 text-3xl md:text-4xl font-bold font-playfair text-bois-fonce mb-14 drop-shadow-sm">
+        <span class="inline-block text-bois-accent"><i class="fas fa-quote-left"></i></span>
+        Ils nous font confiance
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Témoignage 1 -->
+        <figure class="relative bg-gradient-to-br from-white via-bois-clair/60 to-orange-50 rounded-2xl shadow-xl border-2 border-bois-accent p-8 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-orange-200/80 hover:border-orange-400">
+          <span class="absolute top-4 right-4 bg-bois-accent text-white font-bold text-xs px-3 py-1 rounded-full shadow">5★</span>
+          <div class="w-16 h-16 rounded-full mb-4 border-2 border-accent-orange flex items-center justify-center bg-white text-accent-orange text-3xl shadow">
+            <i class="fas fa-user"></i>
+          </div>
+          <blockquote class="text-base md:text-lg text-bois-fonce font-medium italic mb-4 relative">
+            <i class="fas fa-quote-left text-accent-orange mr-2"></i>Excellent travail, rapide et soigné. Je recommande à 100% !<i class="fas fa-quote-right text-accent-orange ml-2"></i>
+          </blockquote>
+          <figcaption class="flex flex-col items-center">
+            <span class="font-bold text-accent-orange">Julie M.</span>
+            <span class="flex text-bois-accent mt-1 animate-pulse" aria-label="Note 5 sur 5">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </span>
+          </figcaption>
+        </figure>
+        <!-- Témoignage 2 -->
+        <figure class="relative bg-gradient-to-br from-white via-bois-clair/60 to-orange-50 rounded-2xl shadow-xl border-2 border-bois-accent p-8 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-orange-200/80 hover:border-orange-400">
+          <span class="absolute top-4 right-4 bg-bois-accent text-white font-bold text-xs px-3 py-1 rounded-full shadow">5★</span>
+          <div class="w-16 h-16 rounded-full mb-4 border-2 border-accent-orange flex items-center justify-center bg-white text-accent-orange text-3xl shadow">
+            <i class="fas fa-user"></i>
+          </div>
+          <blockquote class="text-base md:text-lg text-bois-fonce font-medium italic mb-4 relative">
+            <i class="fas fa-quote-left text-accent-orange mr-2"></i>Très satisfait du service, artisan sérieux et à l’écoute.<i class="fas fa-quote-right text-accent-orange ml-2"></i>
+          </blockquote>
+          <figcaption class="flex flex-col items-center">
+            <span class="font-bold text-accent-orange">Marc D.</span>
+            <span class="flex text-bois-accent mt-1 animate-pulse" aria-label="Note 5 sur 5">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </span>
+          </figcaption>
+        </figure>
+        <!-- Témoignage 3 -->
+        <figure class="relative bg-gradient-to-br from-white via-bois-clair/60 to-orange-50 rounded-2xl shadow-xl border-2 border-bois-accent p-8 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-orange-200/80 hover:border-orange-400">
+          <span class="absolute top-4 right-4 bg-bois-accent text-white font-bold text-xs px-3 py-1 rounded-full shadow">5★</span>
+          <div class="w-16 h-16 rounded-full mb-4 border-2 border-accent-orange flex items-center justify-center bg-white text-accent-orange text-3xl shadow">
+            <i class="fas fa-user"></i>
+          </div>
+          <blockquote class="text-base md:text-lg text-bois-fonce font-medium italic mb-4 relative">
+            <i class="fas fa-quote-left text-accent-orange mr-2"></i>Un artisan de confiance, travail impeccable et rapide.<i class="fas fa-quote-right text-accent-orange ml-2"></i>
+          </blockquote>
+          <figcaption class="flex flex-col items-center">
+            <span class="font-bold text-accent-orange">Sophie L.</span>
+            <span class="flex text-bois-accent mt-1 animate-pulse" aria-label="Note 5 sur 5">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section CTA / Contact rapide -->
+  <section id="cta-contact" class="animate-fade-in-up delay-300 py-16 md:py-24 bg-gradient-to-br from-accent-orange/10 via-bois-clair/60 to-white" aria-labelledby="cta-title">
+    <div class="container mx-auto px-6 text-center">
+      <h2 id="cta-title" class="text-3xl md:text-4xl font-bold font-playfair text-bois-fonce mb-6">Besoin d’un devis ou d’un conseil&nbsp;?</h2>
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-bois-fonce font-medium mb-8">Expliquez-moi votre projet, je vous réponds sous 24h&nbsp;!</p>
+      <div class="flex flex-col items-center gap-3">
+        <a href="contact.html" class="inline-flex items-center px-7 py-2 rounded-full bg-gradient-to-r from-bois-accent via-orange-500 to-bois-fonce text-white hover:from-bois-fonce hover:to-orange-500 font-bold shadow-lg transition-all duration-300 border-2 border-white/80 text-lg md:text-xl group">
+          <span class="animate-bounce text-xl" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+          <span class="ml-3">Demander un devis gratuit</span>
+        </a>
+        <span class="text-bois-fonce font-semibold text-sm md:text-base mt-2 drop-shadow-sm">Aucun engagement, réponse rapide et personnalisée</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Inspiration (originale) -->
+  <section id="inspiration" class="animate-fade-in-up delay-400 py-16 md:py-24 bg-white" aria-labelledby="inspiration-title">
+    <div class="container mx-auto px-6">
+      <h2 id="inspiration-title" class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12">Inspiration & Conseils</h2>
+      <div class="relative flex flex-col gap-20 md:gap-32">
+  <!-- Ligne verticale décorative -->
+  <div class="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-bois-accent/30 rounded-full z-0" style="transform: translateX(-50%);"></div>
+
+  <!-- Carte 1 -->
+  <div class="relative flex flex-col md:flex-row items-center md:items-stretch z-10 animate-fade-in-up">
+    <!-- Point de jonction -->
+    <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+      <span class="flex items-center justify-center w-12 h-12 rounded-full bg-white border-4 border-bois-accent shadow-lg">
+        <i class="fas fa-tools text-accent-orange text-2xl"></i>
+      </span>
+    </div>
+    <!-- Image -->
+    <div class="w-full md:w-1/2 flex justify-center md:justify-end mb-6 md:mb-0">
+      <img src="assets/images/illustrations/hero-tools.jpg" alt="Placard sur-mesure optimisant un espace sous-escalier, bois clair et paniers décoratifs" class="h-56 w-56 object-cover rounded-2xl shadow-xl border-4 border-bois-accent bg-white/95 transition-transform duration-300 hover:scale-105" loading="lazy"/>
+    </div>
+    <!-- Texte -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center px-0 md:px-10 text-center md:text-left bg-white/95 rounded-2xl border border-bois-accent shadow-lg drop-shadow-xl py-8 md:py-14 transition-transform duration-300 hover:-translate-y-1">
+      <h3 class="font-bold text-xl md:text-2xl mb-2 font-playfair text-accent-orange drop-shadow-md">Optimisez vos rangements</h3>
+      <p class="text-base md:text-lg text-bois-fonce font-montserrat leading-relaxed">Des astuces concrètes pour exploiter chaque recoin, gagner de la place et organiser votre intérieur avec style et praticité.</p>
+    </div>
+  </div>
+
+  <!-- Carte 2 -->
+  <div class="relative flex flex-col md:flex-row items-center md:items-stretch z-10 animate-fade-in-up delay-200">
+    <!-- Point de jonction -->
+    <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+      <span class="flex items-center justify-center w-12 h-12 rounded-full bg-white border-4 border-bois-accent shadow-lg">
+        <i class="fas fa-lightbulb text-accent-orange text-2xl"></i>
+      </span>
+    </div>
+    <!-- Texte -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center px-0 md:px-10 order-2 md:order-1 text-center md:text-right bg-white/95 rounded-2xl border border-bois-accent shadow-lg drop-shadow-xl py-8 md:py-14 transition-transform duration-300 hover:-translate-y-1">
+      <h3 class="font-bold text-xl md:text-2xl mb-2 font-playfair text-accent-orange drop-shadow-md">Misez sur la lumière</h3>
+      <p class="text-base md:text-lg text-bois-fonce font-montserrat leading-relaxed">Créez une ambiance chaleureuse grâce à un éclairage bien pensé, des matériaux naturels et des touches déco personnalisées.</p>
+    </div>
+    <!-- Image -->
+    <div class="w-full md:w-1/2 flex justify-center md:justify-start order-1 md:order-2 mb-6 md:mb-0">
+      <img src="assets/images/illustrations/valeurs.jpg" alt="Salon lumineux avec suspensions naturelles et grandes fenêtres, ambiance chaleureuse" class="h-56 w-56 object-cover rounded-2xl shadow-xl border-4 border-bois-accent bg-white/95 transition-transform duration-300 hover:scale-105" loading="lazy"/>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section FAQ (originale) -->
+  <section id="faq" class="animate-fade-in-up delay-500 py-16 md:py-24 bg-bois-clair/40" aria-labelledby="faq-title">
+    <div class="container mx-auto px-6">
+      <h2 id="faq-title" class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12">Questions fréquentes</h2>
+      <div class="max-w-4xl mx-auto space-y-6">
+        <details class="bg-white rounded-xl shadow-md p-6 border-l-4 border-accent-orange group" open>
+          <summary class="font-bold text-lg mb-2 cursor-pointer select-none focus:outline-none group-focus:ring-2 group-focus:ring-accent-orange">Quels types de travaux réalisez-vous&nbsp;?</summary>
+          <p class="text-base md:text-lg text-bois-fonce font-medium mt-2">Montage de meubles, petits travaux de rénovation, pose de luminaires, réparation de portes, installation d’étagères, et bien plus encore. Demandez, je m’adapte à votre besoin&nbsp;!</p>
+        </details>
+        <details class="bg-white rounded-xl shadow-md p-6 border-l-4 border-accent-orange group">
+          <summary class="font-bold text-lg mb-2 cursor-pointer select-none focus:outline-none group-focus:ring-2 group-focus:ring-accent-orange">Quel est le délai pour obtenir un devis&nbsp;?</summary>
+          <p class="text-base md:text-lg text-bois-fonce font-medium mt-2">Vous recevez une réponse sous 24h après votre demande, avec un devis personnalisé, clair et sans engagement.</p>
+        </details>
+        <details class="bg-white rounded-xl shadow-md p-6 border-l-4 border-accent-orange group">
+          <summary class="font-bold text-lg mb-2 cursor-pointer select-none focus:outline-none group-focus:ring-2 group-focus:ring-accent-orange">Intervenez-vous en urgence&nbsp;?</summary>
+          <p class="text-base md:text-lg text-bois-fonce font-medium mt-2">Oui, selon disponibilité&nbsp;: pour les petits dépannages (fuite, serrure, électricité), appelez ou envoyez un message pour une réponse prioritaire.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Services -->
+  <section id="services" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12">Nos Services Principaux</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-bois-clair/40 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 text-center border border-bois-moyen/20">
+          <img src="assets/images/illustrations/service1.jpg" alt="Montage de meubles" class="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-white shadow-sm"/>
+          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3">Montage de Meubles</h3>
+          <p class="text-base md:text-lg text-bois-fonce font-medium">Assemblage rapide et précis de vos meubles en kit (IKEA, etc.).</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-bois-clair/40 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 text-center border border-bois-moyen/20">
+           <img src="assets/images/illustrations/service2.jpg" alt="Peinture et papier peint" class="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-white shadow-sm"/>
+          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3">Peinture & Papier Peint</h3>
+          <p class="text-base md:text-lg text-bois-fonce font-medium">Rafraîchissement de vos murs, pose de papier peint soignée.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-bois-clair/40 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 text-center border border-bois-moyen/20">
+           <img src="assets/images/illustrations/service3.jpg" alt="Petits dépannages" class="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-white shadow-sm"/>
+          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3">Petits Dépannages</h3>
+          <p class="text-base md:text-lg text-bois-fonce font-medium">Plomberie légère, électricité simple, fixations diverses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-bois-fonce/95 text-white py-10 mt-16 border-t-2 border-bois-accent/40">
+    <div class="container mx-auto px-6 flex flex-col items-center text-center gap-4">
+      <div class="font-semibold tracking-wide text-base md:text-lg flex items-center justify-center gap-2"><span class="text-accent-orange text-xl">©</span>2025 BricolTout - Tous droits réservés</div>
+      <hr class="w-24 border-bois-accent/60 my-2" />
+      <div class="text-base md:text-lg font-playfair">Création du site</div>
+      <div class="text-base md:text-lg">Conçu avec passion par <span class="font-semibold text-accent-orange">Debarieux David</span> – Spécialiste en création de sites vitrine</div>
+      <a href="mailto:contact.debarieux@gmail.com" class="text-accent-orange hover:underline text-base md:text-lg mt-1">contact.debarieux@gmail.com</a>
+      <a href="#" aria-label="Retour à l'accueil" class="mt-4 flex items-center justify-center group">
+        <span class="inline-block text-accent-orange text-2xl transition-transform duration-200 group-hover:scale-125 group-hover:drop-shadow-md">
+          <i class="fas fa-arrow-up"></i>
+        </span>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

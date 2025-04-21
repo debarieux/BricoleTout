@@ -1,0 +1,28 @@
+{
+  "name": "bricoltout",
+  "version": "1.0.0",
+  "description": "Site vitrine professionnel pour un auto-entrepreneur du bricolage.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run build:css -- --watch & live-server public",
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/styles/output.css --minify",
+    "clean": "rimraf public/styles/output.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "live-server": "^1.2.2",
+    "postcss": "^8.5.3",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.5",
+    "@fontsource/lora": "^5.2.5",
+    "@fontsource/playfair-display": "^5.2.5"
+  }
+}
