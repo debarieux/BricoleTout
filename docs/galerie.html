@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galerie des réalisations – BricoleTout, artisan expert en petits travaux. Découvrez nos chantiers et inspirations !" />
+  <title>Galerie | BricoleTout</title>
+  <link rel="stylesheet" href="styles/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <script type="module" src="src/scripts/main.js" defer></script>
+</head>
+<body class="font-montserrat bg-gradient-to-b from-bois-clair via-bois-moyen to-bois-fonce min-h-screen">
+  <header class="relative z-50 bg-gradient-to-b from-white/98 via-white to-bois-clair/60 shadow-xl border-b-2 border-white/80 py-10">
+  <div class="container mx-auto px-6 flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center justify-center">
+      <div class="relative flex items-center justify-center w-48 h-48 mb-4 rounded-full bg-black border-8 border-white shadow-2xl overflow-hidden">
+        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-48 w-48 object-contain drop-shadow-xl" />
+        <div class="absolute inset-0 bg-wood-pattern opacity-10"></div>
+      </div>
+      <span class="text-4xl md:text-5xl font-playfair font-extrabold text-bois-fonce tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.6)] mb-1" style="letter-spacing:0.02em;">BricolTout</span>
+      <span class="text-xl md:text-2xl font-montserrat font-semibold text-bois-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] mb-6">L'artisan du quotidien</span>
+    </div>
+    <nav class="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-3">
+      <a href="index.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
+        Accueil
+        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+      </a>
+      <a href="index.html#services" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
+        Services
+        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+      </a>
+      <a href="galerie.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
+        Galerie
+        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+      </a>
+      <a href="contact.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
+        Contact
+        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+      </a>
+    </nav>
+  </div>
+</header>
+  <main class="max-w-6xl mx-auto px-4 py-16 animate-sectionReveal">
+    <h1 class="text-4xl md:text-5xl font-playfair font-extrabold text-bois-fonce mb-8 text-center drop-shadow-sm">Nos réalisations</h1>
+    <p class="text-base md:text-lg text-bois-fonce font-medium mb-12 max-w-2xl mx-auto text-center font-montserrat drop-shadow-sm">Découvrez quelques exemples de chantiers réalisés par BricolTout. Chaque projet est mené avec soin, passion et souci du détail.</p>
+    <h2 class="text-3xl md:text-4xl font-playfair font-bold text-bois-fonce mb-10 text-center drop-shadow-sm tracking-tight animate-fade-in-up">Galerie de réalisations</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div class="relative group transition-all duration-700 ease-out animate-gallery-appear">
+        <div class="bg-gradient-to-br from-white/90 via-accent-orange/10 to-white/80 rounded-3xl shadow-2xl border-2 border-accent-orange/40 p-3 flex flex-col items-center justify-center backdrop-blur-xl hover:shadow-accent-orange/40 hover:scale-105 transition-all duration-500">
+          <img src="assets/images/illustrations/galerie1.jpg" alt="Montage dressing sur-mesure" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:rotate-2 group-hover:border-accent-orange/80 border-2 border-white" />
+          <span class="block mt-4 text-accent-orange font-playfair italic text-base md:text-lg font-semibold text-center opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 group-hover:drop-shadow-lg group-hover:bg-white/60 group-hover:px-2 group-hover:rounded-full">Montage dressing sur-mesure</span>
+        </div>
+      </div>
+      <div class="relative group transition-all duration-500 ease-out animate-fade-in-up">
+        <div class="bg-white rounded-3xl shadow-xl border-2 border-accent-orange/30 p-2 flex flex-col items-center justify-center">
+          <img src="assets/images/illustrations/galerie2.jpg" alt="Pose de papier peint moderne" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:-rotate-1 group-hover:border-accent-orange/70 border-2 border-white" />
+          <span class="block mt-3 text-bois-fonce/80 text-sm md:text-base font-light text-center">Pose de papier peint moderne</span>
+        </div>
+      </div>
+      <div class="relative group transition-all duration-500 ease-out animate-fade-in-up">
+        <div class="bg-white rounded-3xl shadow-xl border-2 border-accent-orange/30 p-2 flex flex-col items-center justify-center">
+          <img src="assets/images/illustrations/galerie3.jpg" alt="Peinture murale propre" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:rotate-1 group-hover:border-accent-orange/70 border-2 border-white" />
+          <span class="block mt-3 text-bois-fonce/80 text-sm md:text-base font-light text-center">Peinture murale propre</span>
+        </div>
+      </div>
+      <div class="relative group transition-all duration-500 ease-out animate-fade-in-up">
+        <div class="bg-white rounded-3xl shadow-xl border-2 border-accent-orange/30 p-2 flex flex-col items-center justify-center">
+          <img src="assets/images/illustrations/galerie4.jpg" alt="Menuiserie et finitions bois" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:-rotate-1 group-hover:border-accent-orange/70 border-2 border-white" />
+          <span class="block mt-3 text-bois-fonce/80 text-sm md:text-base font-light text-center">Menuiserie et finitions bois</span>
+        </div>
+      </div>
+      <div class="relative group transition-all duration-500 ease-out animate-fade-in-up">
+        <div class="bg-white rounded-3xl shadow-xl border-2 border-accent-orange/30 p-2 flex flex-col items-center justify-center">
+          <img src="assets/images/illustrations/galerie5.jpg" alt="Plomberie salle de bain" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:rotate-1 group-hover:border-accent-orange/70 border-2 border-white" />
+          <span class="block mt-3 text-bois-fonce/80 text-sm md:text-base font-light text-center">Plomberie salle de bain</span>
+        </div>
+      </div>
+      <div class="relative group transition-all duration-500 ease-out animate-fade-in-up">
+        <div class="bg-white rounded-3xl shadow-xl border-2 border-accent-orange/30 p-2 flex flex-col items-center justify-center">
+          <img src="assets/images/illustrations/galerie6.jpg" alt="Montage meuble TV" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:-rotate-1 group-hover:border-accent-orange/70 border-2 border-white" />
+          <span class="block mt-3 text-bois-fonce/80 text-sm md:text-base font-light text-center">Montage meuble TV</span>
+        </div>
+      </div>
+      <div class="relative group transition-all duration-500 ease-out animate-fade-in-up">
+        <div class="bg-white rounded-3xl shadow-xl border-2 border-accent-orange/30 p-2 flex flex-col items-center justify-center">
+          <img src="assets/images/illustrations/galerie7.jpg" alt="Réparation porte" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:rotate-1 group-hover:border-accent-orange/70 border-2 border-white" />
+          <span class="block mt-3 text-bois-fonce/80 text-sm md:text-base font-light text-center">Réparation porte</span>
+        </div>
+      </div>
+      <div class="relative group transition-all duration-500 ease-out animate-fade-in-up">
+        <div class="bg-white rounded-3xl shadow-xl border-2 border-accent-orange/30 p-2 flex flex-col items-center justify-center">
+          <img src="assets/images/illustrations/galerie8.jpg" alt="Pose étagères murales" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:-rotate-1 group-hover:border-accent-orange/70 border-2 border-white" />
+          <span class="block mt-3 text-bois-fonce/80 text-sm md:text-base font-light text-center">Pose étagères murales</span>
+        </div>
+      </div>
+      <div class="relative group transition-all duration-500 ease-out animate-fade-in-up">
+        <div class="bg-white rounded-3xl shadow-xl border-2 border-accent-orange/30 p-2 flex flex-col items-center justify-center">
+          <img src="assets/images/illustrations/galerie9.jpg" alt="Montage meuble " class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:rotate-1 group-hover:border-accent-orange/70 border-2 border-white" />
+          <span class="block mt-3 text-bois-fonce/80 text-sm md:text-base font-light text-center">Montage meuble</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-bois-fonce font-montserrat text-base md:text-lg font-medium drop-shadow-sm">
+      <span class="font-bold">Vous souhaitez voir plus&nbsp;?</span> Contactez-nous pour d’autres exemples ou pour discuter de votre projet&nbsp;!
+    </div>
+  </main>
+  <footer class="bg-bois-fonce/95 text-white py-10 mt-16 border-t-2 border-bois-accent/40">
+    <div class="container mx-auto px-6 flex flex-col items-center text-center gap-4">
+      <div class="font-semibold tracking-wide text-base md:text-lg flex items-center justify-center gap-2"><span class="text-accent-orange text-xl">©</span>2025 BricolTout - Tous droits réservés</div>
+      <hr class="w-24 border-bois-accent/60 my-2" />
+      <div class="text-base md:text-lg font-playfair">Création du site</div>
+      <div class="text-base md:text-lg">Conçu avec passion par <span class="font-semibold text-accent-orange">Debarieux David</span> – Spécialiste en création de sites vitrine</div>
+      <a href="mailto:contact.debarieux@gmail.com" class="text-accent-orange hover:underline text-base md:text-lg mt-1">contact.debarieux@gmail.com</a>
+      <a href="#" aria-label="Retour à l'accueil" class="mt-4 flex items-center justify-center group">
+        <span class="inline-block text-accent-orange text-2xl transition-transform duration-200 group-hover:scale-125 group-hover:drop-shadow-md">
+          <i class="fas fa-arrow-up"></i>
+        </span>
+      </a>
+    </div>
+    <a href="#top" class="flex items-center justify-center w-12 h-12 mx-auto mb-2 rounded-full bg-bois-accent text-white shadow-lg hover:bg-bois-fonce transition-all duration-300 text-2xl" title="Remonter en haut">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</footer>
+</body>
+</html>
