@@ -3,7 +3,7 @@ node_modules/
 
 # Build files
 dist/
-public/styles/output.css
+!public/styles/output.css
 
 # Environment variables
 .env
