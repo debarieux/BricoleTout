@@ -32,19 +32,29 @@
     </div>
   </header>
 
-  <!-- Section Hero Simple -->
-  <section class="relative py-20 md:py-32 bg-gradient-to-b from-white to-bois-clair/50 overflow-hidden">
-    <!-- Fond décoratif -->
-    <svg class="absolute top-0 left-0 w-full h-full opacity-10 z-0" viewBox="0 0 1440 500" fill="none" preserveAspectRatio="none"><path d="M0 100 Q 360 250 720 150 T 1440 200 V 500 H 0 Z" fill="#D4B89A"/></svg>
+  <!-- Section Hero avec Parallax -->
+  <section class="relative py-20 md:py-32 bg-gradient-to-b from-white to-bois-clair/50 overflow-hidden perspective-1000">
+    <!-- Éléments de parallax décoratifs -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <!-- Fond décoratif avec effet parallax -->
+      <svg class="absolute top-0 left-0 w-full h-full opacity-10 parallax" data-speed="0.1" viewBox="0 0 1440 500" fill="none" preserveAspectRatio="none"><path d="M0 100 Q 360 250 720 150 T 1440 200 V 500 H 0 Z" fill="#D4B89A"/></svg>
+      
+      <!-- Formes géométriques flottantes avec parallax -->
+      <div class="absolute top-[10%] left-[5%] w-24 h-24 rounded-full bg-accent-orange/10 parallax" data-speed="0.3"></div>
+      <div class="absolute top-[20%] right-[10%] w-32 h-32 rounded-lg bg-bois-accent/5 rotate-45 parallax" data-speed="0.2"></div>
+      <div class="absolute bottom-[15%] left-[15%] w-20 h-20 rounded-lg bg-bois-fonce/5 rotate-12 parallax" data-speed="0.25"></div>
+      <div class="absolute bottom-[25%] right-[20%] w-16 h-16 rounded-full bg-accent-orange/10 parallax" data-speed="0.15"></div>
+    </div>
     <div class="container mx-auto px-6 text-center relative z-10">
       <h1 class="text-4xl md:text-6xl font-bold font-playfair text-bois-fonce mb-6 leading-tight">
-        <h1 class="font-playfair text-4xl md:text-6xl font-bold text-bois-fonce mb-6 leading-tight">BricoleTout&nbsp;: L'artisan du quotidien</h1> Pour vos petits travaux
+        <h1 class="font-playfair text-4xl md:text-6xl font-bold text-bois-fonce mb-6 leading-tight">BricolTout&nbsp;: L'artisan du quotidien</h1> Pour vos petits travaux
       </h1>
       <p class="text-lg md:text-xl text-bois-fonce/80 max-w-2xl mx-auto mb-10">
         Montage de meubles, peinture, petites réparations... Simplifiez votre quotidien avec un service professionnel, rapide et soigné.
       </p>
-      <a href="contact.html" class="inline-block px-7 py-3 mt-8 rounded-full bg-gradient-to-r from-bois-accent via-orange-500 to-bois-fonce text-white hover:from-bois-fonce hover:to-orange-500 font-bold shadow-lg transition-all duration-300 border-2 border-white/80 text-lg md:text-xl">
-        Demander un devis <i class="fas fa-wrench ml-2"></i>
+      <a href="contact.html" class="cta-primary inline-block px-8 py-4 mt-8 rounded-full bg-gradient-to-r from-bois-accent via-orange-500 to-bois-fonce text-white hover:from-bois-fonce hover:to-orange-500 font-bold shadow-elevation-3 hover:shadow-elevation-4 transition-all duration-300 border-2 border-white/80 text-xl md:text-2xl transform hover:-translate-y-1 relative overflow-hidden group">
+        <span class="relative z-10">Demander un devis <i class="fas fa-wrench ml-2"></i></span>
+        <span class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
       </a>
     </div>
   </section>
@@ -125,7 +135,7 @@
             <i class="fas fa-quote-left text-accent-orange mr-2"></i>Excellent travail, rapide et soigné. Je recommande à 100% !<i class="fas fa-quote-right text-accent-orange ml-2"></i>
           </blockquote>
           <figcaption class="flex flex-col items-center">
-            <span class="font-bold text-accent-orange">Julie M.</span>
+            <span class="font-bold text-accent-orange">Céline R.</span>
             <span class="flex text-bois-accent mt-1 animate-pulse" aria-label="Note 5 sur 5">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </span>
@@ -141,7 +151,7 @@
             <i class="fas fa-quote-left text-accent-orange mr-2"></i>Très satisfait du service, artisan sérieux et à l’écoute.<i class="fas fa-quote-right text-accent-orange ml-2"></i>
           </blockquote>
           <figcaption class="flex flex-col items-center">
-            <span class="font-bold text-accent-orange">Marc D.</span>
+            <span class="font-bold text-accent-orange">Daniel D.</span>
             <span class="flex text-bois-accent mt-1 animate-pulse" aria-label="Note 5 sur 5">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </span>
@@ -157,7 +167,7 @@
             <i class="fas fa-quote-left text-accent-orange mr-2"></i>Un artisan de confiance, travail impeccable et rapide.<i class="fas fa-quote-right text-accent-orange ml-2"></i>
           </blockquote>
           <figcaption class="flex flex-col items-center">
-            <span class="font-bold text-accent-orange">Sophie L.</span>
+            <span class="font-bold text-accent-orange">Patrick T.</span>
             <span class="flex text-bois-accent mt-1 animate-pulse" aria-label="Note 5 sur 5">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </span>
@@ -260,23 +270,253 @@
       <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12">Nos Services Principaux</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Service 1 -->
-        <div class="bg-bois-clair/40 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 text-center border border-bois-moyen/20">
-          <img src="assets/images/illustrations/service1.jpg" alt="Montage de meubles" class="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-white shadow-sm"/>
-          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3">Montage de Meubles</h3>
+        <div class="service-card bg-gradient-to-br from-white via-bois-clair/40 to-white/90 rounded-xl p-8 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 text-center border border-bois-moyen/20 preserve-3d">
+          <div class="relative mb-6 perspective-500">
+            <div class="absolute -inset-1 bg-gradient-to-r from-bois-accent to-accent-orange rounded-full opacity-30 blur-md"></div>
+            <img src="assets/images/illustrations/service1.jpg" alt="Montage de meubles" class="depth-effect relative w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-md"/>
+          </div>
+          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3 translate-z-5">Montage de Meubles</h3>
           <p class="text-base md:text-lg text-bois-fonce font-medium">Assemblage rapide et précis de vos meubles en kit (IKEA, etc.).</p>
         </div>
         <!-- Service 2 -->
-        <div class="bg-bois-clair/40 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 text-center border border-bois-moyen/20">
-           <img src="assets/images/illustrations/service2.jpg" alt="Peinture et papier peint" class="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-white shadow-sm"/>
-          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3">Peinture & Papier Peint</h3>
+        <div class="service-card bg-gradient-to-br from-white via-bois-clair/40 to-white/90 rounded-xl p-8 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 text-center border border-bois-moyen/20 preserve-3d">
+          <div class="relative mb-6 perspective-500">
+            <div class="absolute -inset-1 bg-gradient-to-r from-bois-accent to-accent-orange rounded-full opacity-30 blur-md"></div>
+            <img src="assets/images/illustrations/service2.jpg" alt="Peinture et papier peint" class="depth-effect relative w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-md"/>
+          </div>
+          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3 translate-z-5">Peinture & Papier Peint</h3>
           <p class="text-base md:text-lg text-bois-fonce font-medium">Rafraîchissement de vos murs, pose de papier peint soignée.</p>
         </div>
         <!-- Service 3 -->
-        <div class="bg-bois-clair/40 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 text-center border border-bois-moyen/20">
-           <img src="assets/images/illustrations/service3.jpg" alt="Petits dépannages" class="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-4 border-white shadow-sm"/>
-          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3">Petits Dépannages</h3>
+        <div class="service-card bg-gradient-to-br from-white via-bois-clair/40 to-white/90 rounded-xl p-8 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 text-center border border-bois-moyen/20 preserve-3d">
+          <div class="relative mb-6 perspective-500">
+            <div class="absolute -inset-1 bg-gradient-to-r from-bois-accent to-accent-orange rounded-full opacity-30 blur-md"></div>
+            <img src="assets/images/illustrations/service3.jpg" alt="Petits dépannages" class="depth-effect relative w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-md"/>
+          </div>
+          <h3 class="text-xl font-bold font-playfair text-bois-fonce mb-3 translate-z-5">Petits Dépannages</h3>
           <p class="text-base md:text-lg text-bois-fonce font-medium">Plomberie légère, électricité simple, fixations diverses.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Configurateur de Devis -->
+  <section id="configurateur-devis-section" class="py-16 md:py-24 bg-gradient-to-br from-bois-clair/30 via-white to-bois-clair/40 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12 animate-fade-in-up">Estimez votre projet</h2>
+      <p class="text-center text-lg md:text-xl text-bois-fonce/80 max-w-3xl mx-auto mb-12 animate-fade-in-up" style="animation-delay: 100ms;">
+        Utilisez notre configurateur interactif pour obtenir une estimation rapide de votre projet. Sélectionnez les services dont vous avez besoin et obtenez un aperçu du coût.
+      </p>
+      
+      <!-- Le conteneur pour le configurateur (sera rempli par JavaScript) -->
+      <div id="configurateur-devis" class="max-w-4xl mx-auto animate-fade-in-up" style="animation-delay: 200ms;">
+        <!-- Version statique du configurateur (visible uniquement si JavaScript est désactivé) -->
+        <noscript>
+          <div class="bg-white/90 rounded-xl shadow-elevation-2 p-6 border border-bois-accent/30">
+            <h3 class="text-2xl md:text-3xl font-bold font-playfair text-bois-fonce mb-6">Estimez le coût de vos travaux</h3>
+            <p class="text-base md:text-lg text-bois-fonce/80 mb-8">Sélectionnez les services dont vous avez besoin pour obtenir une estimation rapide.</p>
+            
+            <!-- Services -->
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <!-- Service 1 -->
+              <div class="service-card bg-gradient-to-br from-white via-bois-clair/40 to-white/90 rounded-xl p-6 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 text-center border border-bois-moyen/20 preserve-3d cursor-pointer">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 rounded-full bg-bois-accent/20 flex items-center justify-center text-bois-accent mr-4">
+                    <i class="fas fa-screwdriver-wrench text-xl"></i>
+                  </div>
+                  <h4 class="text-xl font-bold font-playfair text-bois-fonce">Montage de meubles</h4>
+                </div>
+                <p class="text-bois-fonce/80 mb-4">Assemblage rapide et précis de vos meubles en kit</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-bois-accent font-bold">À partir de 50€</span>
+                  <a href="contact.html" class="px-4 py-2 rounded-full bg-bois-accent text-white hover:bg-bois-fonce transition-colors duration-300">
+                    Demander un devis
+                  </a>
+                </div>
+              </div>
+              
+              <!-- Service 2 -->
+              <div class="service-card bg-gradient-to-br from-white via-bois-clair/40 to-white/90 rounded-xl p-6 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 text-center border border-bois-moyen/20 preserve-3d cursor-pointer">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 rounded-full bg-bois-accent/20 flex items-center justify-center text-bois-accent mr-4">
+                    <i class="fas fa-paint-roller text-xl"></i>
+                  </div>
+                  <h4 class="text-xl font-bold font-playfair text-bois-fonce">Peinture & Papier peint</h4>
+                </div>
+                <p class="text-bois-fonce/80 mb-4">Rafraîchissement de vos murs, pose de papier peint soignée</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-bois-accent font-bold">À partir de 80€</span>
+                  <a href="contact.html" class="px-4 py-2 rounded-full bg-bois-accent text-white hover:bg-bois-fonce transition-colors duration-300">
+                    Demander un devis
+                  </a>
+                </div>
+              </div>
+              
+              <!-- Service 3 -->
+              <div class="service-card bg-gradient-to-br from-white via-bois-clair/40 to-white/90 rounded-xl p-6 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 text-center border border-bois-moyen/20 preserve-3d cursor-pointer">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 rounded-full bg-bois-accent/20 flex items-center justify-center text-bois-accent mr-4">
+                    <i class="fas fa-wrench text-xl"></i>
+                  </div>
+                  <h4 class="text-xl font-bold font-playfair text-bois-fonce">Petits dépannages</h4>
+                </div>
+                <p class="text-bois-fonce/80 mb-4">Plomberie légère, électricité simple, fixations diverses</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-bois-accent font-bold">À partir de 60€</span>
+                  <a href="contact.html" class="px-4 py-2 rounded-full bg-bois-accent text-white hover:bg-bois-fonce transition-colors duration-300">
+                    Demander un devis
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6">
+              <a href="contact.html" class="cta-primary w-full block py-3 text-center rounded-full bg-gradient-to-r from-bois-accent via-orange-500 to-bois-fonce text-white font-bold shadow-3d-button hover:shadow-3d-button-pressed hover:translate-y-1 transition-all duration-200">
+                Demander un devis personnalisé
+              </a>
+              <p class="text-xs text-center mt-2 text-bois-fonce/60">Contactez-nous pour un devis personnalisé adapté à vos besoins.</p>
+            </div>
+          </div>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Calendrier de Disponibilité -->
+  <section id="calendrier-section" class="py-16 md:py-24 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12 animate-fade-in-up">Réservez votre créneau</h2>
+      <p class="text-center text-lg md:text-xl text-bois-fonce/80 max-w-3xl mx-auto mb-12 animate-fade-in-up" style="animation-delay: 100ms;">
+        Consultez nos disponibilités et réservez directement en ligne le créneau qui vous convient. Simple, rapide et pratique !
+      </p>
+      
+      <!-- Le conteneur pour le calendrier (sera rempli par JavaScript) -->
+      <div id="calendrier-disponibilite" class="max-w-4xl mx-auto animate-fade-in-up" style="animation-delay: 200ms;">
+        <!-- Version statique du calendrier (visible uniquement si JavaScript est désactivé) -->
+        <noscript>
+          <div class="bg-white/90 rounded-xl shadow-elevation-2 p-6 border border-bois-accent/30">
+            <h3 class="text-2xl md:text-3xl font-bold font-playfair text-bois-fonce mb-6">Réservez votre créneau</h3>
+            
+            <!-- Calendrier statique -->
+            <div class="mb-6">
+              <div class="grid grid-cols-7 gap-1 mb-2">
+                <div class="text-center font-medium text-bois-fonce/70">Lun</div>
+                <div class="text-center font-medium text-bois-fonce/70">Mar</div>
+                <div class="text-center font-medium text-bois-fonce/70">Mer</div>
+                <div class="text-center font-medium text-bois-fonce/70">Jeu</div>
+                <div class="text-center font-medium text-bois-fonce/70">Ven</div>
+                <div class="text-center font-medium text-bois-fonce/70">Sam</div>
+                <div class="text-center font-medium text-bois-fonce/70">Dim</div>
+              </div>
+              <div class="grid grid-cols-7 gap-1">
+                <!-- Jours du mois -->
+                <div class="p-2 text-center text-bois-fonce/30">29</div>
+                <div class="p-2 text-center text-bois-fonce/30">30</div>
+                <div class="p-2 text-center">1</div>
+                <div class="p-2 text-center">2</div>
+                <div class="p-2 text-center">3</div>
+                <div class="p-2 text-center text-bois-fonce/50">4</div>
+                <div class="p-2 text-center text-bois-fonce/50">5</div>
+                
+                <div class="p-2 text-center">6</div>
+                <div class="p-2 text-center">7</div>
+                <div class="p-2 text-center">8</div>
+                <div class="p-2 text-center">9</div>
+                <div class="p-2 text-center">10</div>
+                <div class="p-2 text-center text-bois-fonce/50">11</div>
+                <div class="p-2 text-center text-bois-fonce/50">12</div>
+                
+                <div class="p-2 text-center">13</div>
+                <div class="p-2 text-center">14</div>
+                <div class="p-2 text-center">15</div>
+                <div class="p-2 text-center">16</div>
+                <div class="p-2 text-center">17</div>
+                <div class="p-2 text-center text-bois-fonce/50">18</div>
+                <div class="p-2 text-center text-bois-fonce/50">19</div>
+                
+                <div class="p-2 text-center">20</div>
+                <div class="p-2 text-center">21</div>
+                <div class="p-2 text-center">22</div>
+                <div class="p-2 text-center">23</div>
+                <div class="p-2 text-center">24</div>
+                <div class="p-2 text-center text-bois-fonce/50">25</div>
+                <div class="p-2 text-center text-bois-fonce/50">26</div>
+                
+                <div class="p-2 text-center">27</div>
+                <div class="p-2 text-center">28</div>
+                <div class="p-2 text-center">29</div>
+                <div class="p-2 text-center">30</div>
+                <div class="p-2 text-center">31</div>
+                <div class="p-2 text-center text-bois-fonce/30">1</div>
+                <div class="p-2 text-center text-bois-fonce/30">2</div>
+              </div>
+            </div>
+            
+            <!-- Message pour JavaScript désactivé -->
+            <div class="bg-bois-clair/30 p-4 rounded-lg mb-6">
+              <p class="text-bois-fonce font-medium">Pour réserver un créneau, veuillez nous contacter directement :</p>
+              <div class="flex items-center mt-2">
+                <i class="fas fa-phone text-bois-accent mr-2"></i>
+                <a href="tel:0612345678" class="text-bois-accent hover:underline">06 12 34 56 78</a>
+              </div>
+              <div class="flex items-center mt-2">
+                <i class="fas fa-envelope text-bois-accent mr-2"></i>
+                <a href="mailto:contact@bricoletout.fr" class="text-bois-accent hover:underline">contact@bricoletout.fr</a>
+              </div>
+            </div>
+            
+            <div class="mt-6">
+              <a href="contact.html" class="cta-primary w-full block py-3 text-center rounded-full bg-gradient-to-r from-bois-accent via-orange-500 to-bois-fonce text-white font-bold shadow-3d-button hover:shadow-3d-button-pressed hover:translate-y-1 transition-all duration-200">
+                Contactez-nous pour réserver
+              </a>
+            </div>
+          </div>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Badges et Certifications -->
+  <section id="certifications" class="py-16 md:py-24 bg-gradient-to-br from-bois-clair/30 via-white to-bois-clair/40 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12 animate-fade-in-up">Nos garanties</h2>
+      <p class="text-center text-lg md:text-xl text-bois-fonce/80 max-w-3xl mx-auto mb-12 animate-fade-in-up" style="animation-delay: 100ms;">
+        Faites confiance à un professionnel qualifié et reconnu pour tous vos travaux.
+      </p>
+      
+      <!-- Le conteneur pour les badges (sera rempli par JavaScript) -->
+      <div id="badges-certifications" class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto animate-fade-in-up" style="animation-delay: 200ms;">
+        <!-- Version statique des badges (visible uniquement si JavaScript est désactivé) -->
+        <noscript>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Badge 1 -->
+            <div class="bg-white rounded-xl shadow-elevation-2 p-6 border border-bois-accent/20 card-3d transition-all duration-300">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-bois-accent/20 flex items-center justify-center text-bois-accent">
+                <i class="fas fa-certificate text-3xl"></i>
+              </div>
+              <h4 class="text-xl font-bold font-playfair text-bois-fonce mb-2 text-center">Artisan Certifié</h4>
+              <p class="text-bois-fonce/80 text-center">Certification professionnelle reconnue par la Chambre des Métiers</p>
+            </div>
+            
+            <!-- Badge 2 -->
+            <div class="bg-white rounded-xl shadow-elevation-2 p-6 border border-bois-accent/20 card-3d transition-all duration-300">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-bois-accent/20 flex items-center justify-center text-bois-accent">
+                <i class="fas fa-shield-check text-3xl"></i>
+              </div>
+              <h4 class="text-xl font-bold font-playfair text-bois-fonce mb-2 text-center">Garantie Qualité</h4>
+              <p class="text-bois-fonce/80 text-center">Tous nos travaux sont garantis pendant 1 an</p>
+            </div>
+            
+            <!-- Badge 3 -->
+            <div class="bg-white rounded-xl shadow-elevation-2 p-6 border border-bois-accent/20 card-3d transition-all duration-300">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-bois-accent/20 flex items-center justify-center text-bois-accent">
+                <i class="fas fa-tools text-3xl"></i>
+              </div>
+              <h4 class="text-xl font-bold font-playfair text-bois-fonce mb-2 text-center">10+ ans d'expérience</h4>
+              <p class="text-bois-fonce/80 text-center">Une décennie d'expertise à votre service</p>
+            </div>
+          </div>
+        </noscript>
       </div>
     </div>
   </section>
@@ -296,5 +536,10 @@
     </div>
   </footer>
 
+  <!-- Scripts JavaScript -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/configurateur.js"></script>
+  <script src="scripts/calendrier.js"></script>
+  <script src="scripts/icones.js"></script>
 </body>
 </html>

@@ -5,7 +5,36 @@ import '@fontsource/lora/700.css';
 import '@fontsource/playfair-display/400.css';
 import '@fontsource/playfair-display/700.css';
 
-// Script interactif BricoleTout (header, menu, animations, accessibilité)
+// Script interactif BricoleTout (header, menu, animations, accessibilité, parallax, 3D)
+
+// Fonction pour détecter si l'utilisateur préfère les animations réduites
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Fonction pour charger les images progressivement (lazy loading)
+const lazyLoadImages = () => {
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+  if ('loading' in HTMLImageElement.prototype) {
+    // Le navigateur supporte le lazy loading natif
+    console.log('Lazy loading natif supporté');
+  } else {
+    // Fallback pour les navigateurs qui ne supportent pas le lazy loading natif
+    const lazyImageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const lazyImage = entry.target as HTMLImageElement;
+          if (lazyImage.dataset.src) {
+            lazyImage.src = lazyImage.dataset.src;
+          }
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+    
+    lazyImages.forEach(image => {
+      lazyImageObserver.observe(image);
+    });
+  }
+};
 
 // Animation ombre dynamique sur le header
 const header = document.querySelector('header');
@@ -45,18 +74,77 @@ if (sun) {
   sun.classList.add('animate-spin-slow');
 }
 
-// Animation fade-in des sections au scroll
-const fadeSections = document.querySelectorAll('section[class*="animate-fade-in-up"]');
-const fadeInOnScroll = () => {
-  fadeSections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 80) {
-      section.classList.add('opacity-100');
+// Animation fade-in des sections au scroll avec diffu00e9rents effets
+const animatedElements = document.querySelectorAll('[class*="animate-fade-in"], [class*="animate-scale-in"], [class*="animate-sectionReveal"], [class*="animate-gallery-appear"]');
+
+// Fonction avancu00e9e pour animer les u00e9lu00e9ments au scroll
+const animateOnScroll = () => {
+  if (prefersReducedMotion) return; // Respecter les pru00e9fu00e9rences d'accessibilitu00e9
+  
+  animatedElements.forEach((element, index) => {
+    const rect = element.getBoundingClientRect();
+    const delayAttr = element.getAttribute('data-delay');
+    const delay = delayAttr ? parseInt(delayAttr, 10) : index * 100; // Du00e9lai progressif ou personnalisu00e9
+    
+    // Activer l'animation quand l'u00e9lu00e9ment est visible
+    if (rect.top < window.innerHeight - 50) {
+      setTimeout(() => {
+        element.classList.add('animate-active');
+        (element as HTMLElement).style.opacity = '1';
+      }, delay);
     }
   });
 };
-window.addEventListener('scroll', fadeInOnScroll);
-window.addEventListener('DOMContentLoaded', fadeInOnScroll);
+
+// Effet parallax sur les u00e9lu00e9ments avec la classe .parallax
+const parallaxElements = document.querySelectorAll('.parallax');
+const parallaxEffect = () => {
+  if (prefersReducedMotion) return;
+  
+  parallaxElements.forEach(element => {
+    const speedAttr = element.getAttribute('data-speed');
+    const speed = speedAttr ? parseFloat(speedAttr) : 0.2;
+    const yPos = -(window.scrollY * speed);
+    (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+  });
+};
+
+// Observer pour les animations au défilement
+const createScrollObserver = () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const animationClass = Array.from(element.classList).find(cls => cls.startsWith('animate-'));
+        if (animationClass) {
+          (element as HTMLElement).style.opacity = '1';
+          element.classList.add(animationClass + '-active');
+        }
+        observer.unobserve(element);
+      }
+    });
+  }, { threshold: 0.15 });
+  
+  document.querySelectorAll('[class*="animate-"]').forEach(element => {
+    if (!prefersReducedMotion) {
+      (element as HTMLElement).style.opacity = '0';
+      observer.observe(element);
+    } else {
+      (element as HTMLElement).style.opacity = '1'; // Afficher directement si animations réduites préférées
+    }
+  });
+};
+
+// Initialiser les observers et u00e9couteurs d'u00e9vu00e9nements pour les animations
+window.addEventListener('scroll', () => {
+  animateOnScroll();
+  parallaxEffect();
+});
+window.addEventListener('DOMContentLoaded', () => {
+  animateOnScroll();
+  createScrollObserver();
+  lazyLoadImages();
+});
 
 // Micro-interactions sur liens et boutons (scale rapide au clic)
 document.querySelectorAll('a, button').forEach(el => {
@@ -82,4 +170,46 @@ focusEls.forEach(el => {
   });
 });
 
-// TODO: Ajouter d'autres animations custom selon la checklist
+// Importer les modules des nouvelles fonctionnalitu00e9s
+import { initConfigurator } from './configurateur';
+import { initCalendar } from './calendrier';
+import { replaceIcons, apply3DEffects, addBadgesAndCertifications } from './icones';
+
+// Initialiser les fonctionnalitu00e9s quand le DOM est chargu00e9
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialiser le configurateur de devis si pru00e9sent sur la page
+  if (document.getElementById('configurateur-devis')) {
+    initConfigurator();
+  }
+  
+  // Initialiser le calendrier de disponibilitu00e9 si pru00e9sent sur la page
+  if (document.getElementById('calendrier-disponibilite')) {
+    initCalendar();
+  }
+  
+  // Remplacer les icu00f4nes Font Awesome par des icu00f4nes personnalisu00e9es
+  replaceIcons();
+  
+  // Appliquer les effets 3D
+  apply3DEffects();
+  
+  // Ajouter les badges et certifications si le conteneur existe
+  if (document.getElementById('badges-certifications')) {
+    addBadgesAndCertifications();
+  }
+  
+  // Ajouter la classe card-3d aux u00e9lu00e9ments qui devraient avoir cet effet
+  document.querySelectorAll('.service-card, .testimonial-card').forEach(card => {
+    card.classList.add('card-3d');
+  });
+  
+  // Ajouter la classe button-3d aux boutons CTA principaux
+  document.querySelectorAll('.cta-primary').forEach(button => {
+    button.classList.add('button-3d', 'shadow-3d-button');
+  });
+  
+  // Ajouter la classe depth-effect aux images de la galerie
+  document.querySelectorAll('.gallery-img').forEach(img => {
+    img.classList.add('depth-effect');
+  });
+});

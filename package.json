@@ -4,9 +4,11 @@
   "description": "Site vitrine professionnel pour un auto-entrepreneur du bricolage.",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run build:css -- --watch & live-server public",
+    "dev": "npm run build:css -- --watch & tsc --watch & live-server public",
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/styles/output.css --minify",
-    "clean": "rimraf public/styles/output.css",
+    "build:ts": "tsc",
+    "build": "npm run build:css && npm run build:ts",
+    "clean": "rimraf public/styles/output.css public/src/scripts/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
