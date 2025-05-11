@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run build:css -- --watch & tsc --watch & live-server public",
-    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/styles/output.css --minify",
-    "build:ts": "tsc",
+    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./public/styles/output.css --minify",
+    "build:ts": "npx tsc",
     "build": "npm run build:css && npm run build:ts",
+    "vercel-build": "echo 'Skipping build step on Vercel'",
     "clean": "rimraf public/styles/output.css public/src/scripts/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
