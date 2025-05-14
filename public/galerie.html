@@ -13,71 +13,116 @@
   <script type="module" src="src/scripts/main.js" defer></script>
 </head>
 <body class="font-montserrat bg-gradient-to-b from-bois-clair via-bois-moyen to-bois-fonce min-h-screen">
-  <header class="relative z-50 bg-gradient-to-r from-bois-moyen/90 via-bois-clair/95 to-bois-moyen/90 shadow-2xl py-6 backdrop-blur-lg backdrop-filter backdrop-saturate-150 border-b border-white/20">
-    <!-- Filtre pour améliorer la lisibilité -->
-    <div class="absolute inset-0 bg-black/20 backdrop-filter backdrop-brightness-90 backdrop-contrast-110"></div>
-    
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="flex flex-col md:flex-row items-center justify-between">
-        <!-- Logo et titre côté gauche -->
-        <div class="flex items-center mb-6 md:mb-0">
-          <div class="relative h-20 w-20 mr-4 rounded-lg bg-white/90 shadow-lg border-2 border-accent-orange/50 overflow-hidden transform rotate-3 hover:rotate-0 transition-all duration-500">
-            <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-full w-full object-cover drop-shadow-xl" />
-            <div class="absolute inset-0 bg-gradient-to-br from-white/0 via-accent-orange/10 to-bois-fonce/20"></div>
-          </div>
-          <div class="flex flex-col">
-            <h1 class="text-3xl md:text-4xl font-playfair font-bold text-white drop-shadow-lg tracking-wide">BricolTout</h1>
-            <div class="flex items-center mt-1">
-              <span class="text-sm md:text-base font-montserrat text-white/90 italic">Galerie de réalisations</span>
-              <span class="inline-block w-2 h-2 mx-2 rounded-full bg-accent-orange animate-pulse"></span>
-              <span class="text-sm md:text-base font-montserrat text-white/90">Artisan certifié</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Navigation côté droit avec effet 3D -->
-        <nav class="flex space-x-1 md:space-x-3 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl shadow-inner border border-white/20">
-          <a href="index.html" class="relative overflow-hidden group px-4 py-2 rounded-lg text-white hover:text-accent-orange transition-colors duration-300 flex items-center">
-            <span class="absolute inset-0 bg-white/0 group-hover:bg-white/20 transform skew-x-3 transition-all duration-300 rounded-lg"></span>
-            <span class="relative z-10 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              Accueil
-            </span>
-          </a>
-          <a href="index.html#services" class="relative overflow-hidden group px-4 py-2 rounded-lg text-white hover:text-accent-orange transition-colors duration-300 flex items-center">
-            <span class="absolute inset-0 bg-white/0 group-hover:bg-white/20 transform skew-x-3 transition-all duration-300 rounded-lg"></span>
-            <span class="relative z-10 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              Services
-            </span>
-          </a>
-          <a href="galerie.html" class="relative overflow-hidden group px-4 py-2 rounded-lg bg-white/20 text-accent-orange font-bold transition-colors duration-300 flex items-center">
-            <span class="absolute inset-0 bg-white/10 transform skew-x-3 transition-all duration-300 rounded-lg"></span>
-            <span class="relative z-10 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Galerie
-            </span>
-          </a>
-          <a href="contact.html" class="relative overflow-hidden group px-4 py-2 rounded-lg text-white hover:text-accent-orange transition-colors duration-300 flex items-center">
-            <span class="absolute inset-0 bg-white/0 group-hover:bg-white/20 transform skew-x-3 transition-all duration-300 rounded-lg"></span>
-            <span class="relative z-10 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Contact
-            </span>
-          </a>
-        </nav>
-      </div>
+  <!-- Header avec menu burger pour mobile -->  
+  <header id="main-header" class="fixed top-0 w-full z-40 bg-bois-fonce/80 backdrop-blur-md py-4 sm:py-6 transition-all duration-300 shadow-lg">
+    <div class="container mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3 sm:space-x-4 hover:scale-105 transition-transform duration-300">
+        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-full object-cover drop-shadow-xl border-2 border-white/50" />
+        <span class="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-white drop-shadow-xl transition-opacity duration-300 header-text">BricolTout</span>
+      </a>
+      
+      <!-- Bouton menu burger (visible uniquement sur mobile) -->
+      <button id="burger-button" class="block md:hidden text-white focus:outline-none" aria-label="Menu" aria-expanded="false">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      
+      <!-- Navigation desktop -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="nav-link text-white opacity-0 transform -translate-y-4 relative group px-2 py-1">
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent-orange group-hover:w-full transition-all duration-300"></span>
+          Accueil
+        </a>
+        <a href="index.html#services" class="nav-link text-white opacity-0 transform -translate-y-4 relative group px-2 py-1">
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent-orange group-hover:w-full transition-all duration-300"></span>
+          Services
+        </a>
+        <a href="contact.html" class="nav-link text-white opacity-0 transform -translate-y-4 relative group px-2 py-1">
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent-orange group-hover:w-full transition-all duration-300"></span>
+          Contact
+        </a>
+      </nav>
     </div>
   </header>
+  
+  <!-- Menu mobile (séparé du header) -->
+  <div id="mobile-menu" class="fixed inset-0 bg-bois-fonce/95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-center items-center">
+    <button id="close-menu" class="absolute top-4 right-4 text-white focus:outline-none" aria-label="Fermer le menu">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <div class="w-full max-w-sm px-4">
+      <div class="mb-8 text-center">
+        <h2 class="text-3xl font-playfair text-white mb-2">Menu</h2>
+        <div class="h-1 w-16 bg-accent-orange mx-auto rounded-full"></div>
+      </div>
+      <nav class="flex flex-col items-center space-y-8">
+        <a href="index.html" class="mobile-nav-link w-full text-center text-white text-2xl font-playfair relative group py-3 border-b border-white/10">
+          <span>Accueil</span>
+          <span class="block h-0.5 w-0 group-hover:w-full bg-accent-orange transition-all duration-300 mt-1 mx-auto"></span>
+        </a>
+        <a href="index.html#services" class="mobile-nav-link w-full text-center text-white text-2xl font-playfair relative group py-3 border-b border-white/10">
+          <span>Services</span>
+          <span class="block h-0.5 w-0 group-hover:w-full bg-accent-orange transition-all duration-300 mt-1 mx-auto"></span>
+        </a>
+        <a href="contact.html" class="mobile-nav-link w-full text-center text-white text-2xl font-playfair relative group py-3 border-b border-white/10">
+          <span>Contact</span>
+          <span class="block h-0.5 w-0 group-hover:w-full bg-accent-orange transition-all duration-300 mt-1 mx-auto"></span>
+        </a>
+      </nav>
+    </div>
+  </div>
+  
+  <!-- Script pour le menu burger -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const burgerButton = document.getElementById('burger-button');
+      const closeButton = document.getElementById('close-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      // Animation des liens de navigation desktop
+      setTimeout(() => {
+        navLinks.forEach((link, index) => {
+          setTimeout(() => {
+            link.classList.remove('opacity-0', '-translate-y-4');
+          }, 100 * index);
+        });
+      }, 300);
+      
+      // Ouvrir le menu
+      burgerButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+        document.body.classList.add('overflow-hidden'); // Empêcher le défilement de la page
+      });
+      
+      // Fermer le menu
+      closeButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+        document.body.classList.remove('overflow-hidden');
+      });
+      
+      // Fermer le menu quand on clique sur un lien
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('translate-x-0');
+          mobileMenu.classList.add('translate-x-full');
+          document.body.classList.remove('overflow-hidden');
+        });
+      });
+    });
+  </script>
+  
+  <!-- Espacement pour le header fixe -->
+  <div class="pt-32 md:pt-40"></div>
+  
+  <!-- Début du contenu principal -->
   <!-- Ajout d'un effet de parallaxe pour l'arrière-plan -->
   <div class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-bois-clair/30 via-white/90 to-bois-clair/40 z-0 parallax-bg"></div>

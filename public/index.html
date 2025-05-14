@@ -13,14 +13,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="font-montserrat bg-bois-clair/30 text-bois-fonce scroll-smooth">
-  <!-- Header Innovant: transparent, animated overlay -->
-  <header id="main-header" class="fixed top-0 w-full z-50 bg-transparent py-6 transition-all duration-300">
-    <div class="container mx-auto flex items-center justify-between px-6">
-      <a href="index.html" class="flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
-        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover drop-shadow-xl border-2 border-white/50" />
-        <span class="text-3xl md:text-4xl font-playfair font-bold text-white drop-shadow-xl transition-opacity duration-300 header-text mt-2">BricolTout</span>
+  <!-- Header avec menu burger pour mobile -->
+  <header id="main-header" class="fixed top-0 w-full z-40 bg-transparent py-4 sm:py-6 transition-all duration-300">
+    <div class="container mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3 sm:space-x-4 hover:scale-105 transition-transform duration-300">
+        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-full object-cover drop-shadow-xl border-2 border-white/50" />
+        <span class="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-white drop-shadow-xl transition-opacity duration-300 header-text">BricolTout</span>
       </a>
-      <nav class="flex space-x-8">
+      
+      <!-- Bouton menu burger (visible uniquement sur mobile) -->
+      <button id="burger-button" class="block md:hidden text-white focus:outline-none" aria-label="Menu" aria-expanded="false">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      
+      <!-- Navigation desktop -->
+      <nav class="hidden md:flex space-x-8">
         <a href="#services" class="nav-link text-white opacity-0 transform -translate-y-4 relative group px-2 py-1">
           <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent-orange group-hover:w-full transition-all duration-300"></span>
           Services
@@ -36,6 +46,68 @@
       </nav>
     </div>
   </header>
+  
+  <!-- Menu mobile (séparé du header) -->
+  <div id="mobile-menu" class="fixed inset-0 bg-bois-fonce/95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-center items-center">
+    <button id="close-menu" class="absolute top-4 right-4 text-white focus:outline-none" aria-label="Fermer le menu">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <div class="w-full max-w-sm px-4">
+      <div class="mb-8 text-center">
+        <h2 class="text-3xl font-playfair text-white mb-2">Menu</h2>
+        <div class="h-1 w-16 bg-accent-orange mx-auto rounded-full"></div>
+      </div>
+      <nav class="flex flex-col items-center space-y-8">
+        <a href="#services" class="mobile-nav-link w-full text-center text-white text-2xl font-playfair relative group py-3 border-b border-white/10">
+          <span>Services</span>
+          <span class="block h-0.5 w-0 group-hover:w-full bg-accent-orange transition-all duration-300 mt-1 mx-auto"></span>
+        </a>
+        <a href="galerie.html" class="mobile-nav-link w-full text-center text-white text-2xl font-playfair relative group py-3 border-b border-white/10">
+          <span>Galerie</span>
+          <span class="block h-0.5 w-0 group-hover:w-full bg-accent-orange transition-all duration-300 mt-1 mx-auto"></span>
+        </a>
+        <a href="contact.html" class="mobile-nav-link w-full text-center text-white text-2xl font-playfair relative group py-3 border-b border-white/10">
+          <span>Contact</span>
+          <span class="block h-0.5 w-0 group-hover:w-full bg-accent-orange transition-all duration-300 mt-1 mx-auto"></span>
+        </a>
+      </nav>
+    </div>
+  </div>
+  
+  <!-- Script pour le menu burger -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const burgerButton = document.getElementById('burger-button');
+      const closeButton = document.getElementById('close-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      
+      // Ouvrir le menu
+      burgerButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+        document.body.classList.add('overflow-hidden'); // Empêcher le défilement de la page
+      });
+      
+      // Fermer le menu
+      closeButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+        document.body.classList.remove('overflow-hidden');
+      });
+      
+      // Fermer le menu quand on clique sur un lien
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('translate-x-0');
+          mobileMenu.classList.add('translate-x-full');
+          document.body.classList.remove('overflow-hidden');
+        });
+      });
+    });
+  </script>
 
   <!-- Section Hero Premium -->
   <section id="hero" class="relative overflow-hidden min-h-[90vh] flex items-center">
