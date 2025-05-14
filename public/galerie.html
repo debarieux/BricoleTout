@@ -13,45 +13,127 @@
   <script type="module" src="src/scripts/main.js" defer></script>
 </head>
 <body class="font-montserrat bg-gradient-to-b from-bois-clair via-bois-moyen to-bois-fonce min-h-screen">
-  <header class="relative z-50 bg-gradient-to-b from-white/98 via-white to-bois-clair/60 shadow-xl border-b-2 border-white/80 py-10">
-  <div class="container mx-auto px-6 flex flex-col items-center justify-center">
-    <div class="flex flex-col items-center justify-center">
-      <div class="relative flex items-center justify-center w-48 h-48 mb-4 rounded-full bg-black border-8 border-white shadow-2xl overflow-hidden">
-        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-48 w-48 object-contain drop-shadow-xl" />
-        <div class="absolute inset-0 bg-wood-pattern opacity-10"></div>
+  <header class="relative z-50 bg-gradient-to-r from-bois-moyen/90 via-bois-clair/95 to-bois-moyen/90 shadow-2xl py-6 backdrop-blur-lg backdrop-filter backdrop-saturate-150 border-b border-white/20">
+    <!-- Filtre pour améliorer la lisibilité -->
+    <div class="absolute inset-0 bg-black/20 backdrop-filter backdrop-brightness-90 backdrop-contrast-110"></div>
+    
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <!-- Logo et titre côté gauche -->
+        <div class="flex items-center mb-6 md:mb-0">
+          <div class="relative h-20 w-20 mr-4 rounded-lg bg-white/90 shadow-lg border-2 border-accent-orange/50 overflow-hidden transform rotate-3 hover:rotate-0 transition-all duration-500">
+            <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-full w-full object-cover drop-shadow-xl" />
+            <div class="absolute inset-0 bg-gradient-to-br from-white/0 via-accent-orange/10 to-bois-fonce/20"></div>
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-3xl md:text-4xl font-playfair font-bold text-white drop-shadow-lg tracking-wide">BricolTout</h1>
+            <div class="flex items-center mt-1">
+              <span class="text-sm md:text-base font-montserrat text-white/90 italic">Galerie de réalisations</span>
+              <span class="inline-block w-2 h-2 mx-2 rounded-full bg-accent-orange animate-pulse"></span>
+              <span class="text-sm md:text-base font-montserrat text-white/90">Artisan certifié</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Navigation côté droit avec effet 3D -->
+        <nav class="flex space-x-1 md:space-x-3 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl shadow-inner border border-white/20">
+          <a href="index.html" class="relative overflow-hidden group px-4 py-2 rounded-lg text-white hover:text-accent-orange transition-colors duration-300 flex items-center">
+            <span class="absolute inset-0 bg-white/0 group-hover:bg-white/20 transform skew-x-3 transition-all duration-300 rounded-lg"></span>
+            <span class="relative z-10 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              Accueil
+            </span>
+          </a>
+          <a href="index.html#services" class="relative overflow-hidden group px-4 py-2 rounded-lg text-white hover:text-accent-orange transition-colors duration-300 flex items-center">
+            <span class="absolute inset-0 bg-white/0 group-hover:bg-white/20 transform skew-x-3 transition-all duration-300 rounded-lg"></span>
+            <span class="relative z-10 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Services
+            </span>
+          </a>
+          <a href="galerie.html" class="relative overflow-hidden group px-4 py-2 rounded-lg bg-white/20 text-accent-orange font-bold transition-colors duration-300 flex items-center">
+            <span class="absolute inset-0 bg-white/10 transform skew-x-3 transition-all duration-300 rounded-lg"></span>
+            <span class="relative z-10 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Galerie
+            </span>
+          </a>
+          <a href="contact.html" class="relative overflow-hidden group px-4 py-2 rounded-lg text-white hover:text-accent-orange transition-colors duration-300 flex items-center">
+            <span class="absolute inset-0 bg-white/0 group-hover:bg-white/20 transform skew-x-3 transition-all duration-300 rounded-lg"></span>
+            <span class="relative z-10 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Contact
+            </span>
+          </a>
+        </nav>
       </div>
-      <span class="text-4xl md:text-5xl font-playfair font-extrabold text-bois-fonce tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.6)] mb-1" style="letter-spacing:0.02em;">BricolTout</span>
-      <span class="text-xl md:text-2xl font-montserrat font-semibold text-bois-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] mb-6">L'artisan du quotidien</span>
     </div>
-    <nav class="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-3">
-      <a href="index.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
-        Accueil
-        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-      </a>
-      <a href="index.html#services" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
-        Services
-        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-      </a>
-      <a href="galerie.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
-        Galerie
-        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-      </a>
-      <a href="contact.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
-        Contact
-        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-      </a>
-    </nav>
+  </header>
+  <!-- Ajout d'un effet de parallaxe pour l'arrière-plan -->
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-bois-clair/30 via-white/90 to-bois-clair/40 z-0 parallax-bg"></div>
+    
+    <!-- Motif décoratif subtil -->
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMxLjIzIDAgMi4xOTguOTY4IDIuMTk4IDIuMnYxOS42YzAgMS4yMzItLjk2OCAyLjItMi4xOTggMi4ySDIyLjJjLTEuMjMyIDAtMi4yLTAuOTY4LTIuMi0yLjJWMjAuMmMwLTEuMjMyLjk2OC0yLjIgMi4yLTIuMmgxMy44eiIgc3Ryb2tlPSIjRjU5RTQyIiBzdHJva2Utb3BhY2l0eT0iLjA1IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNNTkuOTk5IDMwYzAtMTYuNTY2LTEzLjQzLTI5Ljk5OS0yOS45OTctMjkuOTk5UzAgMTMuNDM0IDAgMzBjMCAxNi41NjggMTMuNDMxIDMwIDMwLjAwMiAzMEw2MCAzMC4wMDJjLS4wMDEtLjAwMS0uMDAxLS4wMDEtLjAwMS0uMDAyeiIgc3Ryb2tlPSIjRjU5RTQyIiBzdHJva2Utb3BhY2l0eT0iLjA1IiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+')] opacity-10 z-0"></div>
   </div>
-</header>
-  <main class="max-w-6xl mx-auto px-4 py-16 animate-sectionReveal">
-    <h1 class="text-4xl md:text-5xl font-playfair font-extrabold text-bois-fonce mb-8 text-center drop-shadow-sm">Nos réalisations</h1>
-    <p class="text-base md:text-lg text-bois-fonce font-medium mb-12 max-w-2xl mx-auto text-center font-montserrat drop-shadow-sm">Découvrez quelques exemples de chantiers réalisés par BricolTout. Chaque projet est mené avec soin, passion et souci du détail.</p>
-    <h2 class="text-3xl md:text-4xl font-playfair font-bold text-bois-fonce mb-10 text-center drop-shadow-sm tracking-tight animate-fade-in-up">Galerie de réalisations</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <div class="relative group transition-all duration-700 ease-out animate-gallery-appear">
-        <div class="bg-gradient-to-br from-white/90 via-accent-orange/10 to-white/80 rounded-3xl shadow-2xl border-2 border-accent-orange/40 p-3 flex flex-col items-center justify-center backdrop-blur-xl hover:shadow-accent-orange/40 hover:scale-105 transition-all duration-500">
-          <img src="assets/images/illustrations/galerie1.jpg" alt="Montage dressing sur-mesure" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:rotate-2 group-hover:border-accent-orange/80 border-2 border-white" />
-          <span class="block mt-4 text-bois-fonce font-playfair italic text-base md:text-lg font-semibold text-center opacity-95 bg-accent-orange/90 px-3 py-1 rounded-full shadow-lg border border-white transition-all duration-500 group-hover:bg-white group-hover:text-accent-orange group-hover:border-accent-orange group-hover:shadow-xl group-hover:scale-105">Montage dressing sur-mesure</span>
+  
+  <main class="relative z-10 max-w-6xl mx-auto px-4 py-16 animate-sectionReveal">
+    <!-- En-tête avec effet 3D -->
+    <div class="relative mb-16 transform perspective-1000">
+      <div class="absolute inset-0 bg-gradient-to-r from-accent-orange/20 via-bois-fonce/10 to-accent-orange/20 transform -skew-y-1 rounded-3xl blur-xl opacity-50"></div>
+      <div class="relative bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border border-white/50 px-8 py-10 transform hover:scale-[1.01] transition-transform duration-500">
+        <h1 class="text-4xl md:text-5xl font-playfair font-extrabold text-bois-fonce mb-4 text-center drop-shadow-sm tracking-tight">Nos réalisations</h1>
+        <div class="w-32 h-1 mx-auto bg-gradient-to-r from-accent-orange/30 via-accent-orange to-accent-orange/30 rounded-full mb-6"></div>
+        <p class="text-base md:text-lg text-bois-fonce font-medium max-w-2xl mx-auto text-center font-montserrat">Découvrez quelques exemples de chantiers réalisés par BricolTout. Chaque projet est mené avec soin, passion et souci du détail.</p>
+      </div>
+    </div>
+    
+    <!-- Filtres de catégories -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12">
+      <button class="category-filter active px-4 py-2 rounded-full bg-bois-fonce text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 border border-transparent hover:border-accent-orange/50">Tous</button>
+      <button class="category-filter px-4 py-2 rounded-full bg-white/70 text-bois-fonce font-medium shadow-md hover:shadow-lg transition-all duration-300 border border-transparent hover:border-accent-orange/50">Plomberie</button>
+      <button class="category-filter px-4 py-2 rounded-full bg-white/70 text-bois-fonce font-medium shadow-md hover:shadow-lg transition-all duration-300 border border-transparent hover:border-accent-orange/50">Électricité</button>
+      <button class="category-filter px-4 py-2 rounded-full bg-white/70 text-bois-fonce font-medium shadow-md hover:shadow-lg transition-all duration-300 border border-transparent hover:border-accent-orange/50">Menuiserie</button>
+      <button class="category-filter px-4 py-2 rounded-full bg-white/70 text-bois-fonce font-medium shadow-md hover:shadow-lg transition-all duration-300 border border-transparent hover:border-accent-orange/50">Décoration</button>
+    </div>
+    
+    <!-- Grille de galerie avec effet masonry -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-auto gallery-masonry">
+      <div class="gallery-item relative group transition-all duration-700 ease-out animate-gallery-appear" data-category="Menuiserie">
+        <div class="bg-gradient-to-br from-white/90 via-accent-orange/10 to-white/80 rounded-3xl shadow-2xl border-2 border-accent-orange/40 p-3 flex flex-col items-center justify-center backdrop-blur-xl hover:shadow-accent-orange/40 hover:scale-[1.03] transition-all duration-500 overflow-hidden">
+          <!-- Badge de catégorie -->
+          <div class="absolute top-5 right-5 z-20">
+            <span class="inline-block bg-bois-fonce/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm shadow-lg">Menuiserie</span>
+          </div>
+          
+          <!-- Image avec effet avancé -->
+          <div class="relative w-full overflow-hidden rounded-2xl">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+            <img src="assets/images/illustrations/galerie1.jpg" alt="Montage dressing sur-mesure" class="gallery-img w-full rounded-2xl object-cover aspect-square transition-all duration-700 group-hover:scale-110 group-hover:shadow-2xl group-hover:rotate-1 border-2 border-white group-hover:border-accent-orange/80" />
+            
+            <!-- Overlay d'information au survol -->
+            <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+              <p class="text-white text-sm font-medium mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Réalisation d'un dressing sur-mesure adapté aux contraintes de l'espace.</p>
+              <div class="flex items-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                <span class="text-white/90 text-xs mr-2">Durée:</span>
+                <span class="text-white text-xs font-semibold">3 jours</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Titre avec effet amélioré -->
+          <div class="relative w-full mt-4">
+            <span class="block text-bois-fonce font-playfair italic text-base md:text-lg font-semibold text-center opacity-95 bg-accent-orange/90 px-4 py-2 rounded-full shadow-lg border border-white transition-all duration-500 group-hover:bg-white group-hover:text-accent-orange group-hover:border-accent-orange group-hover:shadow-xl">Montage dressing sur-mesure</span>
+          </div>
         </div>
       </div>
       <div class="relative group transition-all duration-700 ease-out animate-gallery-appear">
@@ -78,19 +160,41 @@
           <span class="block mt-4 text-bois-fonce font-playfair italic text-base md:text-lg font-semibold text-center opacity-95 bg-accent-orange/90 px-3 py-1 rounded-full shadow-lg border border-white transition-all duration-500 group-hover:bg-white group-hover:text-accent-orange group-hover:border-accent-orange group-hover:shadow-xl group-hover:scale-105">Plomberie salle de bain</span>
         </div>
       </div>
-      <div class="relative group transition-all duration-700 ease-out animate-gallery-appear">
-        <div class="bg-gradient-to-br from-white/90 via-accent-orange/10 to-white/80 rounded-3xl shadow-2xl border-2 border-accent-orange/40 p-3 flex flex-col items-center justify-center backdrop-blur-xl hover:shadow-accent-orange/40 hover:scale-105 transition-all duration-500">
-          <img src="assets/images/illustrations/galerie6.jpg" alt="Montage meuble TV" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:rotate-2 group-hover:border-accent-orange/80 border-2 border-white" />
-          <span class="block mt-4 text-bois-fonce font-playfair italic text-base md:text-lg font-semibold text-center opacity-95 bg-accent-orange/90 px-3 py-1 rounded-full shadow-lg border border-white transition-all duration-500 group-hover:bg-white group-hover:text-accent-orange group-hover:border-accent-orange group-hover:shadow-xl group-hover:scale-105">Montage meuble cuisine</span>
+      <div class="gallery-item relative group transition-all duration-700 ease-out animate-gallery-appear animate-on-scroll" data-category="Menuiserie">
+        <div class="bg-gradient-to-br from-white/90 via-accent-orange/10 to-white/80 rounded-3xl shadow-2xl border-2 border-accent-orange/40 p-3 flex flex-col items-center justify-center backdrop-blur-xl hover:shadow-accent-orange/40 hover:scale-[1.03] transition-all duration-500 overflow-hidden">
+          <!-- Badge de catégorie -->
+          <div class="absolute top-5 right-5 z-20">
+            <span class="inline-block bg-bois-fonce/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm shadow-lg">Menuiserie</span>
+          </div>
+          
+          <!-- Image avec effet avancé -->
+          <div class="relative w-full overflow-hidden rounded-2xl">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+            <img src="assets/images/illustrations/galerie6.jpg" alt="Montage meuble cuisine" class="gallery-img w-full rounded-2xl object-cover aspect-square transition-all duration-700 group-hover:scale-110 group-hover:shadow-2xl group-hover:rotate-1 border-2 border-white group-hover:border-accent-orange/80" />
+            
+            <!-- Overlay d'information au survol -->
+            <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+              <p class="text-white text-sm font-medium mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Installation complète d'un meuble de cuisine avec ajustements sur mesure.</p>
+              <div class="flex items-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                <span class="text-white/90 text-xs mr-2">Durée:</span>
+                <span class="text-white text-xs font-semibold">1 jour</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Titre avec effet amélioré -->
+          <div class="relative w-full mt-4">
+            <span class="block text-bois-fonce font-playfair italic text-base md:text-lg font-semibold text-center opacity-95 bg-accent-orange/90 px-4 py-2 rounded-full shadow-lg border border-white transition-all duration-500 group-hover:bg-white group-hover:text-accent-orange group-hover:border-accent-orange group-hover:shadow-xl">Montage meuble cuisine</span>
+          </div>
         </div>
       </div>
-      <div class="relative group transition-all duration-700 ease-out animate-gallery-appear">
+      <div class="gallery-item relative group transition-all duration-700 ease-out animate-gallery-appear" data-category="Électricité">
         <div class="bg-gradient-to-br from-white/90 via-accent-orange/10 to-white/80 rounded-3xl shadow-2xl border-2 border-accent-orange/40 p-3 flex flex-col items-center justify-center backdrop-blur-xl hover:shadow-accent-orange/40 hover:scale-105 transition-all duration-500">
-          <img src="assets/images/illustrations/galerie7.jpg" alt="Réparation porte" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:rotate-2 group-hover:border-accent-orange/80 border-2 border-white" />
-          <span class="block mt-4 text-bois-fonce font-playfair italic text-base md:text-lg font-semibold text-center opacity-95 bg-accent-orange/90 px-3 py-1 rounded-full shadow-lg border border-white transition-all duration-500 group-hover:bg-white group-hover:text-accent-orange group-hover:border-accent-orange group-hover:shadow-xl group-hover:scale-105">Réparation porte</span>
+          <img src="assets/images/illustrations/galerie7.jpg" alt="Réparation électrique" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:rotate-2 group-hover:border-accent-orange/80 border-2 border-white" />
+          <span class="block mt-4 text-bois-fonce font-playfair italic text-base md:text-lg font-semibold text-center opacity-95 bg-accent-orange/90 px-3 py-1 rounded-full shadow-lg border border-white transition-all duration-500 group-hover:bg-white group-hover:text-accent-orange group-hover:border-accent-orange group-hover:shadow-xl group-hover:scale-105">Réparation électrique</span>
         </div>
       </div>
-      <div class="relative group transition-all duration-700 ease-out animate-gallery-appear">
+      <div class="gallery-item relative group transition-all duration-700 ease-out animate-gallery-appear" data-category="Menuiserie">
         <div class="bg-gradient-to-br from-white/90 via-accent-orange/10 to-white/80 rounded-3xl shadow-2xl border-2 border-accent-orange/40 p-3 flex flex-col items-center justify-center backdrop-blur-xl hover:shadow-accent-orange/40 hover:scale-105 transition-all duration-500">
           <img src="assets/images/illustrations/galerie8.jpg" alt="Pose étagères murales" class="gallery-img rounded-2xl object-cover aspect-square transition-transform duration-500 group-hover:scale-110 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:rotate-2 group-hover:border-accent-orange/80 border-2 border-white" />
           <span class="block mt-4 text-bois-fonce font-playfair italic text-base md:text-lg font-semibold text-center opacity-95 bg-accent-orange/90 px-3 py-1 rounded-full shadow-lg border border-white transition-all duration-500 group-hover:bg-white group-hover:text-accent-orange group-hover:border-accent-orange group-hover:shadow-xl group-hover:scale-105">Pose étagères murales</span>
@@ -103,10 +207,125 @@
         </div>
       </div>
     </div>
-    <div class="mt-12 text-center text-bois-fonce font-montserrat text-base md:text-lg font-medium drop-shadow-sm">
-      <span class="font-bold">Vous souhaitez voir plus&nbsp;?</span> Contactez-nous pour d’autres exemples ou pour discuter de votre projet&nbsp;!
+    <div class="mt-16 text-center">
+      <div class="inline-block bg-white/80 backdrop-blur-md rounded-xl shadow-xl border border-accent-orange/20 px-8 py-6 transform hover:scale-[1.02] transition-all duration-500">
+        <p class="text-bois-fonce font-montserrat text-base md:text-lg font-medium mb-4">
+          <span class="font-bold text-accent-orange">Vous souhaitez voir plus&nbsp;?</span> Contactez-nous pour d'autres exemples ou pour discuter de votre projet&nbsp;!
+        </p>
+        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-bois-accent via-accent-orange to-bois-accent text-white font-bold rounded-full shadow-lg hover:shadow-accent-orange/30 hover:scale-105 transition-all duration-300">
+          Demander un devis gratuit
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
     </div>
   </main>
+  
+  <!-- Scripts pour les effets de la galerie -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Effet de parallaxe pour l'arrière-plan
+      window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const parallaxBg = document.querySelector('.parallax-bg');
+        if (parallaxBg) {
+          parallaxBg.style.transform = `translateY(${scrollY * 0.05}px)`;
+        }
+      });
+      
+      // Filtrage des catégories
+      const categoryButtons = document.querySelectorAll('.category-filter');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Retirer la classe active de tous les boutons
+          categoryButtons.forEach(btn => btn.classList.remove('active', 'bg-bois-fonce', 'text-white'));
+          categoryButtons.forEach(btn => btn.classList.add('bg-white/70', 'text-bois-fonce'));
+          
+          // Ajouter la classe active au bouton cliqué
+          this.classList.add('active', 'bg-bois-fonce', 'text-white');
+          this.classList.remove('bg-white/70', 'text-bois-fonce');
+          
+          const category = this.textContent.trim();
+          
+          // Filtrer les éléments de la galerie
+          galleryItems.forEach(item => {
+            if (category === 'Tous' || item.dataset.category === category) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 50);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+      
+      // Animation au défilement
+      const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        
+        elements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 150;
+          
+          if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add('visible');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', animateOnScroll);
+      animateOnScroll(); // Exécuter une fois au chargement
+    });
+  </script>
+  
+  <style>
+    /* Styles pour les animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .gallery-item {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .category-filter.active {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .category-filter.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #F59E42, transparent);
+      animation: shimmer 2s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
   <footer class="bg-bois-fonce/95 text-white py-10 mt-16 border-t-2 border-bois-accent/40">
     <div class="container mx-auto px-6 flex flex-col items-center text-center gap-4">
       <div class="font-semibold tracking-wide text-base md:text-lg flex items-center justify-center gap-2"><span class="text-accent-orange text-xl">2025</span> BricolTout - Tous droits réservés</div>

@@ -12,55 +12,96 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="font-montserrat bg-bois-clair/30 text-bois-fonce">
-
-  <!-- Header Minimaliste Boisé -->
-  <header class="w-full bg-gradient-to-b from-[#f5ede6] via-white to-[#e8ded2] py-8 border-b border-[#efe9e2]">
-    <div class="flex flex-col items-center">
-      <div class="relative flex items-center justify-center w-48 h-48 mb-4 rounded-full bg-black border-8 border-white shadow-2xl overflow-hidden">
-        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-48 w-48 object-contain drop-shadow-xl" />
-        <div class="absolute inset-0 bg-wood-pattern opacity-10"></div>
-      </div>
-      <h1 class="text-4xl md:text-5xl font-playfair font-bold text-[#6d4325] mb-1 text-center">BricolTout</h1>
-      <div class="text-lg md:text-xl text-[#a3783c] font-semibold mb-6 text-center">L'artisan du quotidien</div>
-      <nav class="flex flex-row gap-10 mt-2 mb-2">
-        <a href="index.html" class="text-[#6d4325] font-semibold font-playfair text-base md:text-lg hover:underline">Accueil</a>
-        <a href="#services" class="text-[#6d4325] font-semibold font-playfair text-base md:text-lg hover:underline">Services</a>
-        <a href="galerie.html" class="text-[#6d4325] font-semibold font-playfair text-base md:text-lg hover:underline">Galerie</a>
-        <a href="contact.html" class="text-[#6d4325] font-semibold font-playfair text-base md:text-lg hover:underline">Contact</a>
+<body class="font-montserrat bg-bois-clair/30 text-bois-fonce scroll-smooth">
+  <!-- Header Innovant: transparent, animated overlay -->
+  <header id="main-header" class="fixed top-0 w-full z-50 bg-transparent py-6 transition-all duration-300">
+    <div class="container mx-auto flex items-center justify-between px-6">
+      <a href="index.html" class="flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
+        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover drop-shadow-xl border-2 border-white/50" />
+        <span class="text-3xl md:text-4xl font-playfair font-bold text-white drop-shadow-xl transition-opacity duration-300 header-text mt-2">BricolTout</span>
+      </a>
+      <nav class="flex space-x-8">
+        <a href="#services" class="nav-link text-white opacity-0 transform -translate-y-4 relative group px-2 py-1">
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent-orange group-hover:w-full transition-all duration-300"></span>
+          Services
+        </a>
+        <a href="galerie.html" class="nav-link text-white opacity-0 transform -translate-y-4 relative group px-2 py-1">
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent-orange group-hover:w-full transition-all duration-300"></span>
+          Galerie
+        </a>
+        <a href="contact.html" class="nav-link text-white opacity-0 transform -translate-y-4 relative group px-2 py-1">
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent-orange group-hover:w-full transition-all duration-300"></span>
+          Contact
+        </a>
       </nav>
     </div>
   </header>
 
-  <!-- Section Hero avec Parallax -->
-  <section class="relative py-20 md:py-32 bg-gradient-to-b from-white to-bois-clair/50 overflow-hidden perspective-1000">
-    <!-- Éléments de parallax décoratifs -->
-    <div class="absolute inset-0 z-0 overflow-hidden">
-      <!-- Fond décoratif avec effet parallax -->
-      <svg class="absolute top-0 left-0 w-full h-full opacity-10 parallax" data-speed="0.1" viewBox="0 0 1440 500" fill="none" preserveAspectRatio="none"><path d="M0 100 Q 360 250 720 150 T 1440 200 V 500 H 0 Z" fill="#D4B89A"/></svg>
-      
-      <!-- Formes géométriques flottantes avec parallax -->
-      <div class="absolute top-[10%] left-[5%] w-24 h-24 rounded-full bg-accent-orange/10 parallax" data-speed="0.3"></div>
-      <div class="absolute top-[20%] right-[10%] w-32 h-32 rounded-lg bg-bois-accent/5 rotate-45 parallax" data-speed="0.2"></div>
-      <div class="absolute bottom-[15%] left-[15%] w-20 h-20 rounded-lg bg-bois-fonce/5 rotate-12 parallax" data-speed="0.25"></div>
-      <div class="absolute bottom-[25%] right-[20%] w-16 h-16 rounded-full bg-accent-orange/10 parallax" data-speed="0.15"></div>
+  <!-- Section Hero Premium -->
+  <section id="hero" class="relative overflow-hidden min-h-[90vh] flex items-center">
+    <!-- Image de fond optimisée avec parallax -->
+    <div class="absolute inset-0 bg-gradient-to-t from-bois-fonce/95 to-bois-fonce/75 z-0">
+      <img src="assets/images/illustrations/hero-tools.jpg" alt="Outils de bricolage professionnels" 
+           class="w-full h-full object-cover object-center scale-110 animate-zoom-slow brightness-[0.7] contrast-[1.1] filter" />
     </div>
-    <div class="container mx-auto px-6 text-center relative z-10">
-      <h1 class="text-4xl md:text-6xl font-bold font-playfair text-bois-fonce mb-6 leading-tight">
-        <h1 class="font-playfair text-4xl md:text-6xl font-bold text-bois-fonce mb-6 leading-tight">BricolTout&nbsp;: L'artisan du quotidien</h1> Pour vos petits travaux
-      </h1>
-      <p class="text-lg md:text-xl text-bois-fonce/80 max-w-2xl mx-auto mb-10">
-        Montage de meubles, peinture, petites réparations... Simplifiez votre quotidien avec un service professionnel, rapide et soigné.
-      </p>
-      <a href="contact.html" class="cta-primary inline-block px-8 py-4 mt-8 rounded-full bg-gradient-to-r from-bois-accent via-orange-500 to-bois-fonce text-white hover:from-bois-fonce hover:to-orange-500 font-bold shadow-elevation-3 hover:shadow-elevation-4 transition-all duration-300 border-2 border-white/80 text-xl md:text-2xl transform hover:-translate-y-1 relative overflow-hidden group">
-        <span class="relative z-10">Demander un devis <i class="fas fa-wrench ml-2"></i></span>
-        <span class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-      </a>
+    
+    <!-- Contenu Hero -->
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-2xl mt-24"> <!-- Augmentation de la marge en haut pour éviter la superposition -->
+        <!-- Badge de confiance -->
+        <div class="bg-white/30 backdrop-blur-md border border-white/40 inline-flex items-center px-4 py-2 rounded-full mb-6 animate-fade-in-down shadow-lg">
+          <span class="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+          <span class="text-white font-medium">Artisan certifié • 10+ ans d'expérience</span>
+        </div>
+        
+        <!-- Titre principal -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-white mb-6 leading-tight animate-fade-in-down">
+          Votre expert en <span class="text-accent-orange">bricolage</span> à domicile
+        </h1>
+        
+        <!-- Sous-titre -->
+        <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-lg animate-fade-in-up" style="animation-delay: 200ms;">
+          Solutions rapides et professionnelles pour tous vos travaux. 
+          <span class="block mt-2 font-semibold">Devis gratuit sous 24h.</span>
+        </p>
+        
+        <!-- Boutons CTA améliorés -->
+        <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 400ms;">
+          <a href="contact.html" class="bg-accent-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check"></i>
+            <span>Prendre rendez-vous</span>
+          </a>
+          <a href="tel:+33612345678" class="bg-white hover:bg-gray-100 text-bois-fonce font-bold py-4 px-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2">
+            <i class="fas fa-phone"></i>
+            <span>06 00 00 00 00</span>
+          </a>
+        </div>
+        
+        <!-- Avis clients -->
+        <div class="mt-10 flex items-center animate-fade-in-up" style="animation-delay: 600ms;">
+          <div class="flex -space-x-2 mr-4">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Client satisfait">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Client satisfait">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Client satisfait">
+          </div>
+          <div>
+            <div class="flex text-yellow-400 mb-1">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-white text-sm font-medium">4.9/5 sur 127 avis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Décorations -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
+      <i class="fas fa-chevron-down text-white text-2xl opacity-70"></i>
     </div>
   </section>
 
   <!-- Section Présentation du service -->
-  <section id="presentation" class="py-20 md:py-28 bg-white">
+  <section id="presentation" class="py-20 md:py-28 bg-white scroll-mt-16">
   <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10 md:gap-16">
     <!-- Image à gauche -->
     <div class="w-full md:w-1/2 flex flex-col items-center mb-16 md:mb-0">
@@ -102,7 +143,7 @@
 </section>
 
   <!-- Section Avantages / Valeurs -->
-  <section id="valeurs" class="animate-fade-in-up delay-100 py-20 md:py-28 bg-bois-clair/60" aria-labelledby="valeurs-title">
+  <section id="valeurs" class="animate-fade-in-up delay-100 py-20 md:py-28 bg-bois-clair/60 scroll-mt-16" aria-labelledby="valeurs-title">
     <div class="container mx-auto px-6">
       <h2 id="valeurs-title" class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12">Nos valeurs ajoutées</h2>
       <div class="grid md:grid-cols-3 gap-8 mt-8" role="list">
@@ -129,7 +170,7 @@
   </section>
 
   <!-- Section Témoignages / Preuve sociale -->
-  <section id="temoignages" class="relative animate-fade-in-up delay-200 py-20 md:py-28 bg-gradient-to-br from-white via-bois-clair/60 to-orange-50 overflow-hidden">
+  <section id="temoignages" class="relative animate-fade-in-up delay-200 py-20 md:py-28 bg-gradient-to-br from-white via-bois-clair/60 to-orange-50 overflow-hidden scroll-mt-16">
   <div class="container mx-auto px-6 flex flex-col items-center">
     <div class="bg-white/95 border-2 border-bois-accent rounded-3xl shadow-2xl px-4 md:px-12 py-12 w-full max-w-6xl">
       <h2 id="temoignages-title" class="flex items-center justify-center gap-3 text-3xl md:text-4xl font-bold font-playfair text-bois-fonce mb-14 drop-shadow-sm">
@@ -277,7 +318,7 @@
   </section>
 
   <!-- Section Services -->
-  <section id="services" class="py-16 md:py-24 bg-white">
+  <section id="services" class="py-16 md:py-24 bg-white scroll-mt-16">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center text-bois-fonce mb-12">Nos Services Principaux</h2>
       <div class="grid md:grid-cols-3 gap-8">
@@ -535,7 +576,7 @@
 
   <footer class="bg-bois-fonce/95 text-white py-10 mt-16 border-t-2 border-bois-accent/40">
     <div class="container mx-auto px-6 flex flex-col items-center text-center gap-4">
-      <div class="font-semibold tracking-wide text-base md:text-lg flex items-center justify-center gap-2"><span class="text-accent-orange text-xl">©</span>2025 BricolTout - Tous droits réservés</div>
+      <div class="font-semibold tracking-wide text-base md:text-lg flex items-center justify-center gap-2"><span class="text-accent-orange text-xl">2025</span> BricolTout - Tous droits réservés</div>
       <hr class="w-24 border-bois-accent/60 my-2" />
       <div class="text-base md:text-lg font-playfair">Création du site</div>
       <div class="text-base md:text-lg">Conçu avec passion par <span class="font-semibold text-accent-orange">Debarieux David</span> – Spécialiste en création de sites vitrine</div>
@@ -549,6 +590,51 @@
   </footer>
 
   <!-- Scripts JavaScript -->
+  <script>
+    // Staggered link animation and scroll header bg toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smooth scroll pour les liens d'ancrage
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId !== '#') {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+      document.querySelectorAll('.nav-link').forEach((el, i) => {
+        setTimeout(() => el.classList.replace('opacity-0','opacity-100') || el.classList.replace('-translate-y-4','translate-y-0'), i * 150);
+      });
+      const hdr = document.getElementById('main-header');
+      const headerText = document.querySelector('.header-text');
+      
+      // Animation initiale
+      setTimeout(() => {
+        headerText.classList.add('opacity-100');
+      }, 500);
+
+      window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) {
+          hdr.classList.replace('bg-transparent','bg-bois-fonce/80');
+          hdr.classList.replace('py-6','py-2');
+          headerText.classList.add('opacity-0');
+          headerText.classList.remove('opacity-100');
+        } else {
+          hdr.classList.replace('bg-bois-fonce/80','bg-transparent');
+          hdr.classList.replace('py-2','py-6');
+          headerText.classList.remove('opacity-0');
+          headerText.classList.add('opacity-100');
+        }
+      });
+    });
+  </script>
   <script src="scripts/main.js"></script>
   <script src="scripts/configurateur.js"></script>
   <script src="scripts/calendrier.js"></script>

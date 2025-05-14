@@ -14,37 +14,88 @@
 </head>
 <body class="font-montserrat bg-gradient-to-br from-bois-clair/30 via-white to-bois-clair/50 text-bois-fonce">
 
-  <!-- Header (identique à index.html) -->
-  <header class="relative z-50 bg-gradient-to-b from-white/98 via-white to-bois-clair/60 shadow-xl border-b-2 border-white/80 py-10">
-  <div class="container mx-auto px-6 flex flex-col items-center justify-center">
-    <div class="flex flex-col items-center justify-center">
-      <div class="relative flex items-center justify-center w-48 h-48 mb-4 rounded-full bg-black border-8 border-white shadow-2xl overflow-hidden">
-        <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-48 w-48 object-contain drop-shadow-xl" />
-        <div class="absolute inset-0 bg-wood-pattern opacity-10"></div>
+  <!-- Header Contact -->
+  <header class="relative z-50 bg-gradient-to-br from-bois-fonce via-bois-moyen to-bois-accent/80 shadow-xl py-8 backdrop-filter backdrop-blur-lg backdrop-brightness-90 backdrop-contrast-125">
+    <!-- Filtre pour améliorer la lisibilité -->
+    <div class="absolute inset-0 bg-black/15 backdrop-filter backdrop-brightness-95 backdrop-contrast-110"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <!-- Logo et titre avec animation -->
+        <a href="index.html" class="group flex items-center space-x-4 mb-6 md:mb-0 hover:scale-105 transition-all duration-500">
+          <div class="relative flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-accent-orange/20 to-bois-fonce/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <img src="assets/logoBricolTout2.png" alt="Logo BricoleTout" class="h-full w-full object-cover" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-3xl font-playfair font-bold text-white drop-shadow-lg">BricolTout</h1>
+            <div class="flex items-center">
+              <span class="text-white/90 text-sm font-montserrat tracking-wider">CONTACTEZ-NOUS</span>
+              <span class="ml-2 px-2 py-0.5 bg-white/20 rounded-full text-xs text-white/90 backdrop-blur-sm">Réponse sous 24h</span>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Navigation avec effet néon -->
+        <nav class="flex flex-wrap justify-center">
+          <div class="flex bg-white/10 backdrop-blur-md rounded-full p-1.5 shadow-lg border border-white/20">
+            <a href="index.html" class="nav-link-contact relative px-4 py-2 text-white/90 hover:text-white transition-colors duration-300 rounded-full mx-1">
+              <span class="relative z-10 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Accueil
+              </span>
+            </a>
+            <a href="index.html#services" class="nav-link-contact relative px-4 py-2 text-white/90 hover:text-white transition-colors duration-300 rounded-full mx-1">
+              <span class="relative z-10 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Services
+              </span>
+            </a>
+            <a href="galerie.html" class="nav-link-contact relative px-4 py-2 text-white/90 hover:text-white transition-colors duration-300 rounded-full mx-1">
+              <span class="relative z-10 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Galerie
+              </span>
+            </a>
+            <a href="contact.html" class="nav-link-contact relative px-4 py-2 bg-white/20 text-white font-bold transition-colors duration-300 rounded-full mx-1 shadow-inner border border-white/30">
+              <span class="relative z-10 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Contact
+              </span>
+            </a>
+          </div>
+        </nav>
       </div>
-      <span class="text-4xl md:text-5xl font-playfair font-extrabold text-bois-fonce tracking-tight drop-shadow-[0_2px_2px_rgba(255,255,255,0.6)] mb-1" style="letter-spacing:0.02em;">BricolTout</span>
-      <span class="text-xl md:text-2xl font-montserrat font-semibold text-bois-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] mb-6">L'artisan du quotidien</span>
+      
+      <!-- Ligne décorative avec animation -->
+      <div class="relative mt-4 overflow-hidden">
+        <div class="h-px w-full bg-gradient-to-r from-white/0 via-white/50 to-white/0"></div>
+        <div class="absolute top-0 left-0 h-px w-1/3 bg-accent-orange animate-lineSlide"></div>
+      </div>
     </div>
-    <nav class="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-3">
-      <a href="index.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
-        Accueil
-        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-      </a>
-      <a href="index.html#services" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
-        Services
-        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-      </a>
-      <a href="galerie.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
-        Galerie
-        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-      </a>
-      <a href="contact.html" class="text-bois-fonce font-semibold text-lg md:text-xl px-2 py-1 rounded transition-all duration-300 relative group drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)] hover:text-bois-accent hover:bg-white/70">
-        Contact
-        <span class="block h-0.5 bg-bois-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-      </a>
-    </nav>
-  </div>
-</header>
+  </header>
+  
+  <!-- Ajout du style pour l'animation de la ligne -->
+  <style>
+    @keyframes lineSlide {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(300%); }
+    }
+    .animate-lineSlide {
+      animation: lineSlide 3s ease-in-out infinite;
+    }
+    .nav-link-contact:hover {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+  </style>
 
   <!-- Section Contact "Premium" -->
   <section class="min-h-[80vh] flex items-center justify-center py-16 md:py-24 px-4">
